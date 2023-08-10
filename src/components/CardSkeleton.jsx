@@ -1,0 +1,45 @@
+import React from 'react'
+import { Star } from 'lucide-react'
+
+export function CardSkeleton() {
+  return (
+    <div className='container m-10 grid grid-cols-1 md:grid-cols-4'>
+      {
+Array(10)
+.fill("")
+.map((e, index) => (
+  <div key={index} className="w-[300px] rounded-2xl border mb-8">
+    <div
+      className="h-[200px] w-full rounded-2xl object-cover bg-gray-300"
+    ></div>
+    <div className="p-4">
+      <span className="inline-flex h-[25px] w-2/3 bg-gray-300 items-center rounded-full text-lg font-semibold">
+      
+      </span>
+      <span className="inline-flex h-[25px] w-1/3  bg-gray-300 items-center rounded-full text-lg font-semibold">
+      
+      </span>
+      
+     
+     
+      <div className="mt-4">
+        <div className="mb-2 mr-2 h-[25px]  w-1/3 inline-block rounded-full bg-gray-300 px-3 py-1 text-[10px] font-semibold text-gray-900">
+        </div> 
+        <div className="mb-2 mr-2 h-[25px]  w-1/3 inline-block rounded-full bg-gray-300 px-3 py-1 text-[10px] font-semibold text-gray-900">
+        </div>
+        <br />
+        <div className="mb-2 mr-2 h-[25px] w-2/3 inline-block rounded-full bg-gray-300 px-3 py-1 text-[10px] font-semibold text-gray-900">
+          
+        </div>
+       
+      
+      </div>
+      
+    </div>
+  </div>))
+      }
+      </div>
+
+   
+  )
+}
