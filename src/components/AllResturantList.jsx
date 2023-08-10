@@ -3,14 +3,14 @@ import SingleResturantCard from "./SingleResturantCard";
 import { Link } from "react-router-dom";
 import { filterData } from "../utils/helper";
 import { useState, useEffect } from "react";
-import { CardSkeleton } from './CardSkeleton';
+import { CardSkeleton } from "./CardSkeleton";
+import { resturantList } from "../constants/constants";
+
 const AllResturantList = () => {
   const [allResturants, setAllResturants] = useState([]);
   const [filteredResturants, setFilteredResturants] = useState([]);
   const [searchText, setSearchText] = useState("");
-  const [loading,setLoading]=useState(false)
-
-
+  const [loading, setLoading] = useState(false);
 
   const url = `https://www.swiggy.com/mapi/restaurants/list/v5?offset=0&is-seo-homepage-enabled=true&lat=22.572646&lng=88.36389500000001&carousel=true&third_party_vendor=1`;
   useEffect(() => {
@@ -19,7 +19,7 @@ const AllResturantList = () => {
 
   const getResturants = async () => {
     try {
-      setLoading(true)
+      setLoading(true);
       const data = await fetch(url);
       const json = await data.json();
       setAllResturants(
@@ -30,17 +30,22 @@ const AllResturantList = () => {
         json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
           ?.restaurants
       );
-      setLoading(false)
+      setLoading(false);
       console.log(
         json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
           ?.restaurants
       );
     } catch (error) {
       console.log(error);
+      setLoading(false)
+      setAllResturants(resturantList);
+      setFilteredResturants(resturantList);
     }
   };
 
-  return loading?<CardSkeleton/>:(
+  return loading ? (
+    <CardSkeleton />
+  ) : (
     <>
       <div className='flex w-full mt-2 mb-2 items-center space-x-2 md:w-1/3 mx-auto'>
         <input
@@ -68,15 +73,16 @@ const AllResturantList = () => {
         {filteredResturants.map((resturant) => {
           return (
             <Link
-            to={"/resturant/" + resturant.info.id}
-            key={resturant.info.id}
-          >
-          <SingleResturantCard {...resturant.info} />
-          </Link>);
+              to={"/resturant/" + resturant.info.id}
+              key={resturant.info.id}
+            >
+              <SingleResturantCard {...resturant.info} />
+            </Link>
+          );
         })}
       </div>
     </>
-  )}
-
+  );
+};
 
 export default AllResturantList;

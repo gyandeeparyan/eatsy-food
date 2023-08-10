@@ -4,734 +4,2350 @@ export const IMG_CDN_URL =
 export const FETCH_MENU_URL =
   "https://www.swiggy.com/mapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=22.572646&lng=88.36389500000001&restaurantId=";
 
-export const restaurantList = [
+export const resturantList = [
   {
-    type: "restaurant",
-    data: {
-      type: "F",
-      id: "73011",
-      name: "KFC",
-      uuid: "27ff4155-fe46-418e-9862-ab98953bf953",
-      city: "22",
-      area: "Anand Vihar Colony",
-      totalRatingsString: "5000+ ratings",
-      cloudinaryImageId: "bdcd233971b7c81bf77e1fa4471280eb",
-      cuisines: ["American", "Snacks", "Biryani"],
-      tags: [],
-      costForTwo: 30000,
-      costForTwoString: "₹300 FOR TWO",
-      deliveryTime: 31,
-      minDeliveryTime: 31,
-      maxDeliveryTime: 31,
-      slaString: "31 MINS",
-      lastMileTravel: 6.199999809265137,
-      slugs: {
-        restaurant: "kfc-chukkuwala-chukkuwala",
-        city: "dehradun",
-      },
-      cityState: "22",
-      address:
-        "KFC Restaurant, Khasra No 1281/1291, Opp Dr Manish Jain hospital, Chakrata road, Dehradun-248001",
-      locality: "Clock Tower",
-      parentId: 547,
-      unserviceable: false,
-      veg: false,
-      select: false,
-      favorite: false,
-      tradeCampaignHeaders: [],
-      aggregatedDiscountInfo: {
-        header: "50% off",
-        shortDescriptionList: [
-          {
-            meta: "50% off | Use WELCOME50",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
-          },
-        ],
-        descriptionList: [
-          {
-            meta: "50% off up to ₹100 | Use code WELCOME50",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
-          },
-        ],
-        subHeader: "",
-        headerType: 0,
-        superFreedel: "",
-      },
-      aggregatedDiscountInfoV2: {
-        header: "50% OFF",
-        shortDescriptionList: [
-          {
-            meta: "Use WELCOME50",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
-          },
-        ],
-        descriptionList: [
-          {
-            meta: "50% off up to ₹100 | Use code WELCOME50",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
-          },
-        ],
-        subHeader: "",
-        headerType: 0,
-        superFreedel: "",
-      },
-      ribbon: [
-        {
-          type: "PROMOTED",
-        },
+    "info": {
+      "id": "3071",
+      "name": "Jai Hind Dhaba",
+      "cloudinaryImageId": "cdbdjcego1vt4reojqiy",
+      "locality": "Sarat Bose Road, Paddapukur",
+      "areaName": "Bhowanipore",
+      "costForTwo": "₹500 for two",
+      "cuisines": [
+        "North Indian",
+        "Indian",
+        "Tandoor",
+        "Kebabs",
+        "Punjabi",
+        "Home Food",
+        "Chinese"
       ],
-      chain: [],
-      feeDetails: {
-        fees: [],
-        totalFees: 0,
-        message: "",
-        title: "",
-        amount: "",
-        icon: "",
-      },
-      availability: {
-        opened: true,
-        nextOpenMessage: "",
-        nextCloseMessage: "",
-      },
-      longDistanceEnabled: 0,
-      rainMode: "NONE",
-      thirdPartyAddress: false,
-      thirdPartyVendor: "",
-      adTrackingID: "cid=5698075~p=1~eid=00000185-8b09-7c92-0e51-a04b00dc0124",
-      badges: {
-        imageBased: [],
-        textBased: [],
-        textExtendedBadges: [],
-      },
-      lastMileTravelString: "6.1 kms",
-      hasSurge: false,
-      sla: {
-        restaurantId: "73011",
-        deliveryTime: 31,
-        minDeliveryTime: 31,
-        maxDeliveryTime: 31,
-        lastMileTravel: 6.199999809265137,
-        lastMileDistance: 0,
-        serviceability: "SERVICEABLE",
-        rainMode: "NONE",
-        longDistance: "NOT_LONG_DISTANCE",
-        preferentialService: false,
-        iconType: "EMPTY",
-      },
-      promoted: true,
-      avgRating: "4.0",
-      totalRatings: 5000,
-      new: false,
-    },
-    subtype: "basic",
-  },
-  {
-    type: "restaurant",
-    data: {
-      type: "F",
-      id: "542132",
-      name: "Domnik Pizza",
-      uuid: "f2ee37f5-9ab0-4903-9420-6cae020b0a38",
-      city: "22",
-      area: "Majra    Bansal Home",
-      totalRatingsString: "50+ ratings",
-      cloudinaryImageId: "sboh9oor0cvp6ztsyhvj",
-      cuisines: ["Pizzas", "Italian", "Fast Food", "Snacks", "Beverages"],
-      tags: [],
-      costForTwo: 30000,
-      costForTwoString: "₹300 FOR TWO",
-      deliveryTime: 33,
-      minDeliveryTime: 33,
-      maxDeliveryTime: 33,
-      slaString: "33 MINS",
-      lastMileTravel: 0.6000000238418579,
-      slugs: {
-        restaurant: "domnik-pizza-patel-nagar-patel-nagar-2",
-        city: "dehradun",
-      },
-      cityState: "22",
-      address:
-        "28/3 Sewala Chandravani Road, Arcedia Grant, Dehradun Rural, Dehradun, Uttarakhand",
-      locality: "Patel Nagar",
-      parentId: 22321,
-      unserviceable: false,
-      veg: false,
-      select: false,
-      favorite: false,
-      tradeCampaignHeaders: [],
-      aggregatedDiscountInfo: {
-        header: "50% off",
-        shortDescriptionList: [
+      "avgRating": 4.3,
+      "feeDetails": {
+        "restaurantId": "3071",
+        "fees": [
           {
-            meta: "50% off | Use WELCOME50",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
+            "name": "BASE_DISTANCE",
+            "fee": 4000
           },
-        ],
-        descriptionList: [
           {
-            meta: "50% off up to ₹100 | Use code WELCOME50",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
+            "name": "BASE_TIME"
           },
-        ],
-        subHeader: "",
-        headerType: 0,
-        superFreedel: "",
-      },
-      aggregatedDiscountInfoV2: {
-        header: "50% OFF",
-        shortDescriptionList: [
           {
-            meta: "Use WELCOME50",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
-          },
+            "name": "ANCILLARY_SURGE_FEE"
+          }
         ],
-        descriptionList: [
-          {
-            meta: "50% off up to ₹100 | Use code WELCOME50",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
+        "totalFee": 4000
+      },
+      "parentId": "1928",
+      "avgRatingString": "4.3",
+      "totalRatingsString": "10K+",
+      "sla": {
+        "deliveryTime": 34,
+        "lastMileTravel": 4.9,
+        "serviceability": "SERVICEABLE",
+        "slaString": "34 mins",
+        "lastMileTravelString": "4.9 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-08-11 05:00:00",
+        "opened": true
+      },
+      "badges": {
+        
+      },
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "imageBased": {
+            
           },
-        ],
-        subHeader: "",
-        headerType: 0,
-        superFreedel: "",
-      },
-      chain: [],
-      feeDetails: {
-        fees: [],
-        totalFees: 0,
-        message: "",
-        title: "",
-        amount: "",
-        icon: "",
-      },
-      availability: {
-        opened: true,
-        nextOpenMessage: "",
-        nextCloseMessage: "",
-      },
-      longDistanceEnabled: 0,
-      rainMode: "NONE",
-      thirdPartyAddress: false,
-      thirdPartyVendor: "",
-      adTrackingID: "",
-      badges: {
-        imageBased: [],
-        textBased: [],
-        textExtendedBadges: [],
-      },
-      lastMileTravelString: "0.6 kms",
-      hasSurge: false,
-      sla: {
-        restaurantId: "542132",
-        deliveryTime: 33,
-        minDeliveryTime: 33,
-        maxDeliveryTime: 33,
-        lastMileTravel: 0.6000000238418579,
-        lastMileDistance: 0,
-        serviceability: "SERVICEABLE",
-        rainMode: "NONE",
-        longDistance: "NOT_LONG_DISTANCE",
-        preferentialService: false,
-        iconType: "EMPTY",
-      },
-      promoted: false,
-      avgRating: "3.8",
-      totalRatings: 50,
-      new: false,
-    },
-    subtype: "basic",
-  },
-  {
-    type: "restaurant",
-    data: {
-      type: "F",
-      id: "321517",
-      name: "FOOD PLANET RESTAURANT",
-      uuid: "899d5dd4-200a-48b2-a321-391bb9486ec2",
-      city: "22",
-      area: "Majra",
-      totalRatingsString: "50+ ratings",
-      cloudinaryImageId: "ykboewqeoxnne8fgrnui",
-      cuisines: ["Indian", "Chinese", "Tandoor", "Thalis", "Fast Food"],
-      tags: [],
-      costForTwo: 20000,
-      costForTwoString: "₹200 FOR TWO",
-      deliveryTime: 25,
-      minDeliveryTime: 25,
-      maxDeliveryTime: 25,
-      slaString: "25 MINS",
-      lastMileTravel: 0.699999988079071,
-      slugs: {
-        restaurant: "food-planet-restaurant-patel-nagar-patel-nagar",
-        city: "dehradun",
-      },
-      cityState: "22",
-      address:
-        "157/11, Chandra Parisar Chandra Bani Rd, Ekta Enclave, Doon Enclave, Majra, Dehradun, Uttarakhand 248171",
-      locality: "Patel Nagar",
-      parentId: 81850,
-      unserviceable: false,
-      veg: false,
-      select: false,
-      favorite: false,
-      tradeCampaignHeaders: [],
-      aggregatedDiscountInfo: {
-        header: "50% off",
-        shortDescriptionList: [
-          {
-            meta: "50% off | Use WELCOME50",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
+          "textBased": {
+            
           },
-        ],
-        descriptionList: [
-          {
-            meta: "50% off up to ₹100 | Use code WELCOME50",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
-          },
-        ],
-        subHeader: "",
-        headerType: 0,
-        superFreedel: "",
+          "textExtendedBadges": {
+            
+          }
+        }
       },
-      aggregatedDiscountInfoV2: {
-        header: "50% OFF",
-        shortDescriptionList: [
-          {
-            meta: "Use WELCOME50",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
-          },
-        ],
-        descriptionList: [
-          {
-            meta: "50% off up to ₹100 | Use code WELCOME50",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
-          },
-        ],
-        subHeader: "",
-        headerType: 0,
-        superFreedel: "",
+      "aggregatedDiscountInfoV3": {
+        "header": "30% OFF",
+        "subHeader": "UPTO ₹75",
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
       },
-      chain: [],
-      feeDetails: {
-        fees: [],
-        totalFees: 0,
-        message: "",
-        title: "",
-        amount: "",
-        icon: "",
-      },
-      availability: {
-        opened: true,
-        nextOpenMessage: "",
-        nextCloseMessage: "",
-      },
-      longDistanceEnabled: 0,
-      rainMode: "NONE",
-      thirdPartyAddress: false,
-      thirdPartyVendor: "",
-      adTrackingID: "",
-      badges: {
-        imageBased: [],
-        textBased: [],
-        textExtendedBadges: [],
-      },
-      lastMileTravelString: "0.6 kms",
-      hasSurge: false,
-      sla: {
-        restaurantId: "321517",
-        deliveryTime: 25,
-        minDeliveryTime: 25,
-        maxDeliveryTime: 25,
-        lastMileTravel: 0.699999988079071,
-        lastMileDistance: 0,
-        serviceability: "SERVICEABLE",
-        rainMode: "NONE",
-        longDistance: "NOT_LONG_DISTANCE",
-        preferentialService: false,
-        iconType: "EMPTY",
-      },
-      promoted: false,
-      avgRating: "2.8",
-      totalRatings: 50,
-      new: false,
-    },
-    subtype: "basic",
-  },
-  {
-    type: "restaurant",
-    data: {
-      type: "F",
-      id: "311806",
-      name: "Burger King",
-      uuid: "162a4dc4-50de-452a-82cf-751e18ac9952",
-      city: "22",
-      area: "Anand Vihar Colony",
-      totalRatingsString: "5000+ ratings",
-      cloudinaryImageId: "iqh7ew5ldfgvpd5dpz60",
-      cuisines: ["Burgers", "American"],
-      tags: [],
-      costForTwo: 35000,
-      costForTwoString: "₹350 FOR TWO",
-      deliveryTime: 39,
-      minDeliveryTime: 39,
-      maxDeliveryTime: 39,
-      slaString: "39 MINS",
-      lastMileTravel: 6.300000190734863,
-      slugs: {
-        restaurant: "burger-king-chakrata-road-ballupur",
-        city: "dehradun",
-      },
-      cityState: "22",
-      address:
-        "5/5,4/4 & 3/3, GROUND FLOOR, CHAKRATA ROAD, DEHRADUN, UTTRAKHAND",
-      locality: "CHAKRATA ROAD",
-      parentId: 166,
-      unserviceable: false,
-      veg: false,
-      select: false,
-      favorite: false,
-      tradeCampaignHeaders: [],
-      aggregatedDiscountInfo: {
-        header: "60% off",
-        shortDescriptionList: [
-          {
-            meta: "60% off | Use STEALDEAL",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
-          },
-        ],
-        descriptionList: [
-          {
-            meta: "60% off up to ₹120 | Use code STEALDEAL",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
-          },
-        ],
-        subHeader: "",
-        headerType: 0,
-        superFreedel: "",
-      },
-      aggregatedDiscountInfoV2: {
-        header: "60% OFF",
-        shortDescriptionList: [
-          {
-            meta: "Use STEALDEAL",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
-          },
-        ],
-        descriptionList: [
-          {
-            meta: "60% off up to ₹120 | Use code STEALDEAL",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
-          },
-        ],
-        subHeader: "",
-        headerType: 0,
-        superFreedel: "",
-      },
-      ribbon: [
-        {
-          type: "PROMOTED",
+      "orderabilityCommunication": {
+        "title": {
+          
         },
+        "subTitle": {
+          
+        },
+        "message": {
+          
+        },
+        "customIcon": {
+          
+        }
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {
+            
+          },
+          "video": {
+            
+          }
+        }
+      },
+      "reviewsSummary": {
+        
+      },
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {
+        
+      }
+    },
+    "analytics": {
+      
+    },
+    "cta": {
+      "link": "https://www.swiggy.com/restaurants/jai-hind-dhaba-sarat-bose-road-paddapukur-bhowanipore-kolkata-3071",
+      "type": "WEBLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "39236",
+      "name": "KFC",
+      "cloudinaryImageId": "56c9ab92bd79745fd152a30fa2525426",
+      "locality": "Central",
+      "areaName": "Park Street Area",
+      "costForTwo": "₹450 for two",
+      "cuisines": [
+        "Burgers",
+        "Biryani",
+        "American",
+        "Snacks",
+        "Fast Food"
       ],
-      chain: [],
-      feeDetails: {
-        fees: [],
-        totalFees: 0,
-        message: "",
-        title: "",
-        amount: "",
-        icon: "",
+      "avgRating": 4.2,
+      "feeDetails": {
+        "restaurantId": "39236",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 4500
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 4500
       },
-      availability: {
-        opened: true,
-        nextOpenMessage: "",
-        nextCloseMessage: "",
+      "parentId": "547",
+      "avgRatingString": "4.2",
+      "totalRatingsString": "10K+",
+      "sla": {
+        "deliveryTime": 32,
+        "lastMileTravel": 3,
+        "serviceability": "SERVICEABLE",
+        "slaString": "32 mins",
+        "lastMileTravelString": "3.0 km",
+        "iconType": "ICON_TYPE_EMPTY"
       },
-      longDistanceEnabled: 0,
-      rainMode: "NONE",
-      thirdPartyAddress: false,
-      thirdPartyVendor: "",
-      adTrackingID: "cid=5700193~p=4~eid=00000185-8b09-7c92-0e51-a04c00dc0405",
-      badges: {
-        imageBased: [],
-        textBased: [],
-        textExtendedBadges: [],
+      "availability": {
+        "nextCloseTime": "2023-08-11 02:59:00",
+        "opened": true
       },
-      lastMileTravelString: "6.3 kms",
-      hasSurge: false,
-      sla: {
-        restaurantId: "311806",
-        deliveryTime: 39,
-        minDeliveryTime: 39,
-        maxDeliveryTime: 39,
-        lastMileTravel: 6.300000190734863,
-        lastMileDistance: 0,
-        serviceability: "SERVICEABLE",
-        rainMode: "NONE",
-        longDistance: "NOT_LONG_DISTANCE",
-        preferentialService: false,
-        iconType: "EMPTY",
+      "badges": {
+        
       },
-      promoted: true,
-      avgRating: "4.2",
-      totalRatings: 5000,
-      new: false,
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "imageBased": {
+            
+          },
+          "textBased": {
+            
+          },
+          "textExtendedBadges": {
+            
+          }
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "EVERY ITEM",
+        "subHeader": "@ ₹179",
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {
+          
+        },
+        "subTitle": {
+          
+        },
+        "message": {
+          
+        },
+        "customIcon": {
+          
+        }
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {
+            
+          },
+          "video": {
+            
+          }
+        }
+      },
+      "reviewsSummary": {
+        
+      },
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {
+        
+      }
     },
-    subtype: "basic",
+    "analytics": {
+      
+    },
+    "cta": {
+      "link": "https://www.swiggy.com/restaurants/kfc-central-park-street-area-kolkata-39236",
+      "type": "WEBLINK"
+    }
   },
   {
-    type: "restaurant",
-    data: {
-      type: "F",
-      id: "132460",
-      name: "Annapurna Andhra Mess",
-      uuid: "c6460418-904b-4371-9e04-0ce8b1b46cae",
-      city: "22",
-      area: "Dehradun",
-      totalRatingsString: "1000+ ratings",
-      cloudinaryImageId: "zw4qx2szsy9kbszk9n3d",
-      cuisines: ["South Indian", "Biryani", "North Indian"],
-      tags: [],
-      costForTwo: 20000,
-      costForTwoString: "₹200 FOR TWO",
-      deliveryTime: 25,
-      minDeliveryTime: 25,
-      maxDeliveryTime: 25,
-      slaString: "25 MINS",
-      lastMileTravel: 1.399999976158142,
-      slugs: {
-        restaurant: "annapurna-andhra-mess-subhash-nagar-subhash-nagar",
-        city: "dehradun",
-      },
-      cityState: "22",
-      address:
-        "keshav enclave sewla khurd chandrabani road behind uttranchal PG college",
-      locality: "Patel Nagar",
-      parentId: 33997,
-      unserviceable: false,
-      veg: false,
-      select: false,
-      favorite: false,
-      tradeCampaignHeaders: [],
-      aggregatedDiscountInfo: {
-        header: "50% off",
-        shortDescriptionList: [
+    "info": {
+      "id": "149283",
+      "name": "Pizza Hut",
+      "cloudinaryImageId": "2b4f62d606d1b2bfba9ba9e5386fabb7",
+      "locality": "FCD Park Street Kolkata",
+      "areaName": "Park Street Area",
+      "costForTwo": "₹350 for two",
+      "cuisines": [
+        "Fast Food",
+        "Pizzas"
+      ],
+      "avgRating": 3.9,
+      "feeDetails": {
+        "restaurantId": "149283",
+        "fees": [
           {
-            meta: "50% off | Use WELCOME50",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
+            "name": "BASE_DISTANCE",
+            "fee": 4000
           },
-        ],
-        descriptionList: [
           {
-            meta: "50% off up to ₹100 | Use code WELCOME50",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
+            "name": "BASE_TIME"
           },
-        ],
-        subHeader: "",
-        headerType: 0,
-        superFreedel: "",
-      },
-      aggregatedDiscountInfoV2: {
-        header: "50% OFF",
-        shortDescriptionList: [
           {
-            meta: "Use WELCOME50",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
-          },
+            "name": "ANCILLARY_SURGE_FEE"
+          }
         ],
-        descriptionList: [
-          {
-            meta: "50% off up to ₹100 | Use code WELCOME50",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
+        "totalFee": 4000
+      },
+      "parentId": "721",
+      "avgRatingString": "3.9",
+      "totalRatingsString": "5K+",
+      "sla": {
+        "deliveryTime": 36,
+        "lastMileTravel": 3,
+        "serviceability": "SERVICEABLE",
+        "slaString": "36 mins",
+        "lastMileTravelString": "3.0 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-08-11 04:00:00",
+        "opened": true
+      },
+      "badges": {
+        
+      },
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "imageBased": {
+            
           },
-        ],
-        subHeader: "",
-        headerType: 0,
-        superFreedel: "",
+          "textBased": {
+            
+          },
+          "textExtendedBadges": {
+            
+          }
+        }
       },
-      chain: [],
-      feeDetails: {
-        fees: [],
-        totalFees: 0,
-        message: "",
-        title: "",
-        amount: "",
-        icon: "",
+      "aggregatedDiscountInfoV3": {
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
       },
-      availability: {
-        opened: true,
-        nextOpenMessage: "",
-        nextCloseMessage: "",
+      "orderabilityCommunication": {
+        "title": {
+          
+        },
+        "subTitle": {
+          
+        },
+        "message": {
+          
+        },
+        "customIcon": {
+          
+        }
       },
-      longDistanceEnabled: 0,
-      rainMode: "NONE",
-      thirdPartyAddress: false,
-      thirdPartyVendor: "",
-      adTrackingID: "",
-      badges: {
-        imageBased: [],
-        textBased: [],
-        textExtendedBadges: [],
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {
+            
+          },
+          "video": {
+            
+          }
+        }
       },
-      lastMileTravelString: "1.3 kms",
-      hasSurge: false,
-      sla: {
-        restaurantId: "132460",
-        deliveryTime: 25,
-        minDeliveryTime: 25,
-        maxDeliveryTime: 25,
-        lastMileTravel: 1.399999976158142,
-        lastMileDistance: 0,
-        serviceability: "SERVICEABLE",
-        rainMode: "NONE",
-        longDistance: "NOT_LONG_DISTANCE",
-        preferentialService: false,
-        iconType: "EMPTY",
+      "reviewsSummary": {
+        
       },
-      promoted: false,
-      avgRating: "4.0",
-      totalRatings: 1000,
-      new: false,
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {
+        
+      }
     },
-    subtype: "basic",
+    "analytics": {
+      
+    },
+    "cta": {
+      "link": "https://www.swiggy.com/restaurants/pizza-hut-fcd-park-street-park-street-area-kolkata-149283",
+      "type": "WEBLINK"
+    }
   },
   {
-    type: "restaurant",
-    data: {
-      type: "F",
-      id: "496677",
-      name: "Uncle Ji Restaurant",
-      uuid: "e652ab57-22c2-4226-b5ea-a5caa26ee0f8",
-      city: "22",
-      area: "Patel Nagar",
-      totalRatingsString: "Too Few Ratings",
-      cloudinaryImageId: "kx2ghnwagcnqjtmd5jbc",
-      cuisines: ["North Indian", "Snacks", "Beverages"],
-      tags: [],
-      costForTwo: 30000,
-      costForTwoString: "₹300 FOR TWO",
-      deliveryTime: 31,
-      minDeliveryTime: 31,
-      maxDeliveryTime: 31,
-      slaString: "31 MINS",
-      lastMileTravel: 0.800000011920929,
-      slugs: {
-        restaurant: "uncle-ji-restaurant-patel-nagar-patel-nagar",
-        city: "dehradun",
-      },
-      cityState: "22",
-      address: "348 santosh tower, majra road gram majra dehradun 248001",
-      locality: "Patel Nagar",
-      parentId: 298209,
-      unserviceable: false,
-      veg: false,
-      select: false,
-      favorite: false,
-      tradeCampaignHeaders: [],
-      aggregatedDiscountInfo: {
-        header: "50% off",
-        shortDescriptionList: [
+    "info": {
+      "id": "8912",
+      "name": "Subway",
+      "cloudinaryImageId": "0bf19a82b109b40c2f5c56d00f071a33",
+      "locality": "Park Street",
+      "areaName": "Park Street",
+      "costForTwo": "₹350 for two",
+      "cuisines": [
+        "Healthy Food",
+        "Salads",
+        "Snacks",
+        "Desserts",
+        "Beverages"
+      ],
+      "avgRating": 4,
+      "feeDetails": {
+        "restaurantId": "8912",
+        "fees": [
           {
-            meta: "50% off | Use WELCOME50",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
+            "name": "BASE_DISTANCE",
+            "fee": 4000
           },
-        ],
-        descriptionList: [
           {
-            meta: "50% off up to ₹100 | Use code WELCOME50",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
+            "name": "BASE_TIME"
           },
-        ],
-        subHeader: "",
-        headerType: 0,
-        superFreedel: "",
-      },
-      aggregatedDiscountInfoV2: {
-        header: "50% OFF",
-        shortDescriptionList: [
           {
-            meta: "Use WELCOME50",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
-          },
+            "name": "ANCILLARY_SURGE_FEE"
+          }
         ],
-        descriptionList: [
-          {
-            meta: "50% off up to ₹100 | Use code WELCOME50",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
+        "totalFee": 4000
+      },
+      "parentId": "2",
+      "avgRatingString": "4.0",
+      "totalRatingsString": "10K+",
+      "sla": {
+        "deliveryTime": 35,
+        "lastMileTravel": 3,
+        "serviceability": "SERVICEABLE",
+        "slaString": "35 mins",
+        "lastMileTravelString": "3.0 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-08-11 03:00:00",
+        "opened": true
+      },
+      "badges": {
+        
+      },
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "imageBased": {
+            
           },
-        ],
-        subHeader: "",
-        headerType: 0,
-        superFreedel: "",
+          "textBased": {
+            
+          },
+          "textExtendedBadges": {
+            
+          }
+        }
       },
-      chain: [],
-      feeDetails: {
-        fees: [],
-        totalFees: 0,
-        message: "",
-        title: "",
-        amount: "",
-        icon: "",
+      "aggregatedDiscountInfoV3": {
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
       },
-      availability: {
-        opened: true,
-        nextOpenMessage: "",
-        nextCloseMessage: "",
+      "orderabilityCommunication": {
+        "title": {
+          
+        },
+        "subTitle": {
+          
+        },
+        "message": {
+          
+        },
+        "customIcon": {
+          
+        }
       },
-      longDistanceEnabled: 0,
-      rainMode: "NONE",
-      thirdPartyAddress: false,
-      thirdPartyVendor: "",
-      adTrackingID: "",
-      badges: {
-        imageBased: [],
-        textBased: [],
-        textExtendedBadges: [],
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {
+            
+          },
+          "video": {
+            
+          }
+        }
       },
-      lastMileTravelString: "0.8 kms",
-      hasSurge: false,
-      sla: {
-        restaurantId: "496677",
-        deliveryTime: 31,
-        minDeliveryTime: 31,
-        maxDeliveryTime: 31,
-        lastMileTravel: 0.800000011920929,
-        lastMileDistance: 0,
-        serviceability: "SERVICEABLE",
-        rainMode: "NONE",
-        longDistance: "NOT_LONG_DISTANCE",
-        preferentialService: false,
-        iconType: "EMPTY",
+      "reviewsSummary": {
+        
       },
-      promoted: false,
-      avgRating: "--",
-      totalRatings: 0,
-      new: false,
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {
+        
+      }
     },
-    subtype: "basic",
+    "analytics": {
+      
+    },
+    "cta": {
+      "link": "https://www.swiggy.com/restaurants/subway-park-street-kolkata-8912",
+      "type": "WEBLINK"
+    }
   },
-];
+  {
+    "info": {
+      "id": "407661",
+      "name": "Burger King",
+      "cloudinaryImageId": "e33e1d3ba7d6b2bb0d45e1001b731fcf",
+      "locality": "New Market",
+      "areaName": "Esplanade",
+      "costForTwo": "₹350 for two",
+      "cuisines": [
+        "Burgers",
+        "American"
+      ],
+      "avgRating": 4.2,
+      "feeDetails": {
+        "restaurantId": "407661",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 3000
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 3000
+      },
+      "parentId": "166",
+      "avgRatingString": "4.2",
+      "totalRatingsString": "10K+",
+      "sla": {
+        "deliveryTime": 29,
+        "lastMileTravel": 2.7,
+        "serviceability": "SERVICEABLE",
+        "slaString": "29 mins",
+        "lastMileTravelString": "2.7 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-08-11 03:00:00",
+        "opened": true
+      },
+      "badges": {
+        
+      },
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "imageBased": {
+            
+          },
+          "textBased": {
+            
+          },
+          "textExtendedBadges": {
+            
+          }
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "EVERY ITEM",
+        "subHeader": "@ ₹129",
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {
+          
+        },
+        "subTitle": {
+          
+        },
+        "message": {
+          
+        },
+        "customIcon": {
+          
+        }
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {
+            
+          },
+          "video": {
+            
+          }
+        }
+      },
+      "reviewsSummary": {
+        
+      },
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {
+        
+      }
+    },
+    "analytics": {
+      
+    },
+    "cta": {
+      "link": "https://www.swiggy.com/restaurants/burger-king-new-market-esplanade-kolkata-407661",
+      "type": "WEBLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "466935",
+      "name": "Peter Hu?",
+      "cloudinaryImageId": "oukpnymiw7gtvp44svea",
+      "locality": "Park Street",
+      "areaName": "Park Street",
+      "costForTwo": "₹1200 for two",
+      "cuisines": [
+        "Asian",
+        "Chinese",
+        "Pan-Asian",
+        "Thai",
+        "Japanese"
+      ],
+      "avgRating": 4.4,
+      "feeDetails": {
+        "restaurantId": "466935",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 3500
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 3500
+      },
+      "parentId": "280345",
+      "avgRatingString": "4.4",
+      "totalRatingsString": "1K+",
+      "sla": {
+        "deliveryTime": 36,
+        "lastMileTravel": 2.6,
+        "serviceability": "SERVICEABLE",
+        "slaString": "36 mins",
+        "lastMileTravelString": "2.6 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-08-10 23:00:00",
+        "opened": true
+      },
+      "badges": {
+        "imageBadges": [
+          {
+            "imageId": "newg.png",
+            "description": "Gourmet"
+          }
+        ]
+      },
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "imageBased": {
+            "badgeObject": [
+              {
+                "attributes": {
+                  "description": "Gourmet",
+                  "imageId": "newg.png"
+                }
+              }
+            ]
+          },
+          "textBased": {
+            
+          },
+          "textExtendedBadges": {
+            
+          }
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "60% OFF",
+        "subHeader": "UPTO ₹120",
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {
+          
+        },
+        "subTitle": {
+          
+        },
+        "message": {
+          
+        },
+        "customIcon": {
+          
+        }
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {
+            
+          },
+          "video": {
+            
+          }
+        }
+      },
+      "reviewsSummary": {
+        
+      },
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {
+        
+      }
+    },
+    "analytics": {
+      
+    },
+    "cta": {
+      "link": "https://www.swiggy.com/restaurants/peter-hu-park-street-kolkata-466935",
+      "type": "WEBLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "355776",
+      "name": "Grameen Kulfi",
+      "cloudinaryImageId": "pj3ldvf9eyhzfsb80wfx",
+      "locality": "Mackenzie Lane",
+      "areaName": "Salkia",
+      "costForTwo": "₹120 for two",
+      "cuisines": [
+        "Ice Cream",
+        "Desserts"
+      ],
+      "avgRating": 4.7,
+      "veg": true,
+      "feeDetails": {
+        "restaurantId": "355776",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 4000
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 4000
+      },
+      "parentId": "12175",
+      "avgRatingString": "4.7",
+      "totalRatingsString": "1K+",
+      "sla": {
+        "deliveryTime": 30,
+        "lastMileTravel": 4.3,
+        "serviceability": "SERVICEABLE",
+        "slaString": "30 mins",
+        "lastMileTravelString": "4.3 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-08-10 23:00:00",
+        "opened": true
+      },
+      "badges": {
+        
+      },
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "imageBased": {
+            
+          },
+          "textBased": {
+            
+          },
+          "textExtendedBadges": {
+            
+          }
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {
+          
+        },
+        "subTitle": {
+          
+        },
+        "message": {
+          
+        },
+        "customIcon": {
+          
+        }
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {
+            
+          },
+          "video": {
+            
+          }
+        }
+      },
+      "reviewsSummary": {
+        
+      },
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {
+        
+      }
+    },
+    "analytics": {
+      
+    },
+    "cta": {
+      "link": "https://www.swiggy.com/restaurants/grameen-kulfi-mackenzie-lane-salkia-kolkata-355776",
+      "type": "WEBLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "326959",
+      "name": "6 Ballygunge Place Take Away - Maniktala",
+      "cloudinaryImageId": "fh8lmt0d5cnx8fgj5bpk",
+      "locality": "Near Rajabazar Science College, Vidyasagar Street, between HP Petrol Pump and Canis Care Pet",
+      "areaName": "Machuabazar",
+      "costForTwo": "₹800 for two",
+      "cuisines": [
+        "Bengali"
+      ],
+      "avgRating": 4.4,
+      "feeDetails": {
+        "restaurantId": "326959",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 3500
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 3500
+      },
+      "parentId": "1243",
+      "avgRatingString": "4.4",
+      "totalRatingsString": "1K+",
+      "sla": {
+        "deliveryTime": 24,
+        "lastMileTravel": 1.7,
+        "serviceability": "SERVICEABLE",
+        "slaString": "24 mins",
+        "lastMileTravelString": "1.7 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-08-10 22:00:00",
+        "opened": true
+      },
+      "badges": {
+        "imageBadges": [
+          {
+            "imageId": "newg.png",
+            "description": "Gourmet"
+          }
+        ]
+      },
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "imageBased": {
+            "badgeObject": [
+              {
+                "attributes": {
+                  "description": "Gourmet",
+                  "imageId": "newg.png"
+                }
+              }
+            ]
+          },
+          "textBased": {
+            
+          },
+          "textExtendedBadges": {
+            
+          }
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {
+          
+        },
+        "subTitle": {
+          
+        },
+        "message": {
+          
+        },
+        "customIcon": {
+          
+        }
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {
+            
+          },
+          "video": {
+            
+          }
+        }
+      },
+      "reviewsSummary": {
+        
+      },
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {
+        
+      }
+    },
+    "analytics": {
+      
+    },
+    "cta": {
+      "link": "https://www.swiggy.com/restaurants/6-ballygunge-place-take-away-maniktala-near-rajabazar-science-college-vidyasagar-street-between-hp-petrol-pump-and-canis-care-pet-machuabazar-kolkata-326959",
+      "type": "WEBLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "37107",
+      "name": "Natural Ice Cream",
+      "cloudinaryImageId": "ow0tfhk3nw7ag7telsy1",
+      "locality": "Park street",
+      "areaName": "Taltala",
+      "costForTwo": "₹150 for two",
+      "cuisines": [
+        "Ice Cream",
+        "Desserts"
+      ],
+      "avgRating": 4.7,
+      "veg": true,
+      "feeDetails": {
+        "restaurantId": "37107",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 4000
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 4000
+      },
+      "parentId": "2093",
+      "avgRatingString": "4.7",
+      "totalRatingsString": "10K+",
+      "sla": {
+        "deliveryTime": 30,
+        "lastMileTravel": 4,
+        "serviceability": "SERVICEABLE",
+        "slaString": "30 mins",
+        "lastMileTravelString": "4.0 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-08-11 00:45:00",
+        "opened": true
+      },
+      "badges": {
+        
+      },
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "imageBased": {
+            
+          },
+          "textBased": {
+            
+          },
+          "textExtendedBadges": {
+            
+          }
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "20% OFF",
+        "subHeader": "UPTO ₹50",
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {
+          
+        },
+        "subTitle": {
+          
+        },
+        "message": {
+          
+        },
+        "customIcon": {
+          
+        }
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {
+            
+          },
+          "video": {
+            
+          }
+        }
+      },
+      "reviewsSummary": {
+        
+      },
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {
+        
+      }
+    },
+    "analytics": {
+      
+    },
+    "cta": {
+      "link": "https://www.swiggy.com/restaurants/natural-ice-cream-park-street-taltala-kolkata-37107",
+      "type": "WEBLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "30490",
+      "name": "Baskin Robbins - Ice Cream Desserts",
+      "cloudinaryImageId": "85ccae4e3576f9330af102c46ca85395",
+      "locality": "Shakespeare Sarani Road",
+      "areaName": "Elgin",
+      "costForTwo": "₹400 for two",
+      "cuisines": [
+        "Ice Cream",
+        "Desserts"
+      ],
+      "avgRating": 4.6,
+      "veg": true,
+      "feeDetails": {
+        "restaurantId": "30490",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 4000
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 4000
+      },
+      "parentId": "5588",
+      "avgRatingString": "4.6",
+      "totalRatingsString": "1K+",
+      "sla": {
+        "deliveryTime": 30,
+        "lastMileTravel": 4.2,
+        "serviceability": "SERVICEABLE",
+        "slaString": "30 mins",
+        "lastMileTravelString": "4.2 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-08-11 03:00:00",
+        "opened": true
+      },
+      "badges": {
+        
+      },
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "imageBased": {
+            
+          },
+          "textBased": {
+            
+          },
+          "textExtendedBadges": {
+            
+          }
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "30% OFF",
+        "subHeader": "UPTO ₹75",
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {
+          
+        },
+        "subTitle": {
+          
+        },
+        "message": {
+          
+        },
+        "customIcon": {
+          
+        }
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {
+            
+          },
+          "video": {
+            
+          }
+        }
+      },
+      "reviewsSummary": {
+        
+      },
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {
+        
+      }
+    },
+    "analytics": {
+      
+    },
+    "cta": {
+      "link": "https://www.swiggy.com/restaurants/baskin-robbins-ice-cream-desserts-shakespeare-sarani-road-elgin-kolkata-30490",
+      "type": "WEBLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "34785",
+      "name": "The Belgian Waffle Co.",
+      "cloudinaryImageId": "jv0i8vcbtrprxbdszbbj",
+      "locality": "Allenby Road",
+      "areaName": "Bhowanipore",
+      "costForTwo": "₹200 for two",
+      "cuisines": [
+        "Waffle",
+        "Desserts",
+        "Ice Cream"
+      ],
+      "avgRating": 4.4,
+      "veg": true,
+      "feeDetails": {
+        "restaurantId": "34785",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 4000
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 4000
+      },
+      "parentId": "2233",
+      "avgRatingString": "4.4",
+      "totalRatingsString": "10K+",
+      "sla": {
+        "deliveryTime": 35,
+        "lastMileTravel": 4.5,
+        "serviceability": "SERVICEABLE",
+        "slaString": "35 mins",
+        "lastMileTravelString": "4.5 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-08-11 02:00:00",
+        "opened": true
+      },
+      "badges": {
+        
+      },
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "imageBased": {
+            
+          },
+          "textBased": {
+            
+          },
+          "textExtendedBadges": {
+            
+          }
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "20% OFF",
+        "subHeader": "UPTO ₹50",
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {
+          
+        },
+        "subTitle": {
+          
+        },
+        "message": {
+          
+        },
+        "customIcon": {
+          
+        }
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {
+            
+          },
+          "video": {
+            
+          }
+        }
+      },
+      "reviewsSummary": {
+        
+      },
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {
+        
+      }
+    },
+    "analytics": {
+      
+    },
+    "cta": {
+      "link": "https://www.swiggy.com/restaurants/the-belgian-waffle-co-allenby-road-bhowanipore-kolkata-34785",
+      "type": "WEBLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "324204",
+      "name": "LunchBox - Meals and Thalis",
+      "cloudinaryImageId": "lyxepeer3tf8kqmt3xbo",
+      "locality": "DR SURESH CHANDRA BANERJEE ROAD",
+      "areaName": "Beleghata",
+      "costForTwo": "₹200 for two",
+      "cuisines": [
+        "Biryani",
+        "North Indian",
+        "Punjabi",
+        "Healthy Food",
+        "Desserts",
+        "Beverages"
+      ],
+      "avgRating": 4.3,
+      "feeDetails": {
+        "restaurantId": "324204",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 4000
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 4000
+      },
+      "parentId": "4925",
+      "avgRatingString": "4.3",
+      "totalRatingsString": "1K+",
+      "sla": {
+        "deliveryTime": 31,
+        "lastMileTravel": 4.6,
+        "serviceability": "SERVICEABLE",
+        "slaString": "31 mins",
+        "lastMileTravelString": "4.6 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-08-11 00:00:00",
+        "opened": true
+      },
+      "badges": {
+        
+      },
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "imageBased": {
+            
+          },
+          "textBased": {
+            
+          },
+          "textExtendedBadges": {
+            
+          }
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "₹100 OFF",
+        "subHeader": "ABOVE ₹399",
+        "discountTag": "FLAT DEAL",
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {
+          
+        },
+        "subTitle": {
+          
+        },
+        "message": {
+          
+        },
+        "customIcon": {
+          
+        }
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {
+            
+          },
+          "video": {
+            
+          }
+        }
+      },
+      "reviewsSummary": {
+        
+      },
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {
+        
+      }
+    },
+    "analytics": {
+      
+    },
+    "cta": {
+      "link": "https://www.swiggy.com/restaurants/lunchbox-meals-and-thalis-dr-suresh-chandra-banerjee-road-beleghata-kolkata-324204",
+      "type": "WEBLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "324200",
+      "name": "Faasos - Wraps & Rolls",
+      "cloudinaryImageId": "af33b81798b11deba338e94b7585d348",
+      "locality": "DR SURESH CHANDRA BANERJEE ROAD",
+      "areaName": "Beleghata",
+      "costForTwo": "₹200 for two",
+      "cuisines": [
+        "Kebabs",
+        "Fast Food",
+        "Snacks",
+        "North Indian",
+        "American",
+        "Healthy Food",
+        "Desserts",
+        "Beverages"
+      ],
+      "avgRating": 4.2,
+      "feeDetails": {
+        "restaurantId": "324200",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 4000
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 4000
+      },
+      "parentId": "21809",
+      "avgRatingString": "4.2",
+      "totalRatingsString": "1K+",
+      "sla": {
+        "deliveryTime": 32,
+        "lastMileTravel": 4.6,
+        "serviceability": "SERVICEABLE",
+        "slaString": "32 mins",
+        "lastMileTravelString": "4.6 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-08-11 00:00:00",
+        "opened": true
+      },
+      "badges": {
+        "textExtendedBadges": [
+          {
+            "iconId": "guiltfree/GF_Logo_android_3x",
+            "shortDescription": "options available",
+            "fontColor": "#7E808C"
+          }
+        ]
+      },
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "imageBased": {
+            
+          },
+          "textBased": {
+            
+          },
+          "textExtendedBadges": {
+            "badgeObject": [
+              {
+                "attributes": {
+                  "description": "",
+                  "fontColor": "#7E808C",
+                  "iconId": "guiltfree/GF_Logo_android_3x",
+                  "shortDescription": "options available"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {
+          
+        },
+        "subTitle": {
+          
+        },
+        "message": {
+          
+        },
+        "customIcon": {
+          
+        }
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {
+            
+          },
+          "video": {
+            
+          }
+        }
+      },
+      "reviewsSummary": {
+        
+      },
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {
+        
+      }
+    },
+    "analytics": {
+      
+    },
+    "cta": {
+      "link": "https://www.swiggy.com/restaurants/faasos-wraps-and-rolls-dr-suresh-chandra-banerjee-road-beleghata-kolkata-324200",
+      "type": "WEBLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "67717",
+      "name": "Kookie Jar",
+      "cloudinaryImageId": "tg3exxqko24fbnkyizhe",
+      "locality": "Opposite FBB",
+      "areaName": "Elgin",
+      "costForTwo": "₹350 for two",
+      "cuisines": [
+        "Desserts",
+        "Snacks",
+        "Bakery"
+      ],
+      "avgRating": 4.7,
+      "feeDetails": {
+        "restaurantId": "67717",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 4500
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 4500
+      },
+      "parentId": "5550",
+      "avgRatingString": "4.7",
+      "totalRatingsString": "10K+",
+      "sla": {
+        "deliveryTime": 31,
+        "lastMileTravel": 3.9,
+        "serviceability": "SERVICEABLE",
+        "slaString": "31 mins",
+        "lastMileTravelString": "3.9 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-08-10 21:30:00",
+        "opened": true
+      },
+      "badges": {
+        
+      },
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "imageBased": {
+            
+          },
+          "textBased": {
+            
+          },
+          "textExtendedBadges": {
+            
+          }
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {
+          
+        },
+        "subTitle": {
+          
+        },
+        "message": {
+          
+        },
+        "customIcon": {
+          
+        }
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {
+            
+          },
+          "video": {
+            
+          }
+        }
+      },
+      "reviewsSummary": {
+        
+      },
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {
+        
+      }
+    },
+    "analytics": {
+      
+    },
+    "cta": {
+      "link": "https://www.swiggy.com/restaurants/kookie-jar-opposite-fbb-elgin-kolkata-67717",
+      "type": "WEBLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "305800",
+      "name": "Barbeque Nation",
+      "cloudinaryImageId": "pnoiouxy8xixdqn7troj",
+      "locality": "Park Center Building",
+      "areaName": "Park Street",
+      "costForTwo": "₹600 for two",
+      "cuisines": [
+        "North Indian",
+        "Barbecue",
+        "Biryani",
+        "Kebabs",
+        "Mughlai",
+        "Desserts"
+      ],
+      "avgRating": 3.8,
+      "feeDetails": {
+        "restaurantId": "305800",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 3500
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 3500
+      },
+      "parentId": "2438",
+      "avgRatingString": "3.8",
+      "totalRatingsString": "1K+",
+      "sla": {
+        "deliveryTime": 34,
+        "lastMileTravel": 2.9,
+        "serviceability": "SERVICEABLE",
+        "slaString": "34 mins",
+        "lastMileTravelString": "2.9 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-08-10 23:30:00",
+        "opened": true
+      },
+      "badges": {
+        
+      },
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "imageBased": {
+            
+          },
+          "textBased": {
+            
+          },
+          "textExtendedBadges": {
+            
+          }
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "15% OFF",
+        "subHeader": "ABOVE ₹1000",
+        "discountTag": "FLAT DEAL",
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {
+          
+        },
+        "subTitle": {
+          
+        },
+        "message": {
+          
+        },
+        "customIcon": {
+          
+        }
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {
+            
+          },
+          "video": {
+            
+          }
+        }
+      },
+      "reviewsSummary": {
+        
+      },
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {
+        
+      }
+    },
+    "analytics": {
+      
+    },
+    "cta": {
+      "link": "https://www.swiggy.com/restaurants/barbeque-nation-park-center-building-park-street-kolkata-305800",
+      "type": "WEBLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "4430",
+      "name": "Shiraz Golden Restaurant",
+      "cloudinaryImageId": "hsks21k01bgfajnv89fr",
+      "locality": "Park Street",
+      "areaName": "Beniapukur",
+      "costForTwo": "₹500 for two",
+      "cuisines": [
+        "Biryani",
+        "Mughlai",
+        "North Indian",
+        "Indian",
+        "Kebabs",
+        "Tandoor"
+      ],
+      "avgRating": 4.4,
+      "feeDetails": {
+        "restaurantId": "4430",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 4500
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 4500
+      },
+      "parentId": "5569",
+      "avgRatingString": "4.4",
+      "totalRatingsString": "10K+",
+      "sla": {
+        "deliveryTime": 31,
+        "lastMileTravel": 3.7,
+        "serviceability": "SERVICEABLE",
+        "slaString": "31 mins",
+        "lastMileTravelString": "3.7 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-08-10 23:00:00",
+        "opened": true
+      },
+      "badges": {
+        
+      },
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "imageBased": {
+            
+          },
+          "textBased": {
+            
+          },
+          "textExtendedBadges": {
+            
+          }
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "40% OFF",
+        "subHeader": "UPTO ₹80",
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {
+          
+        },
+        "subTitle": {
+          
+        },
+        "message": {
+          
+        },
+        "customIcon": {
+          
+        }
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {
+            
+          },
+          "video": {
+            
+          }
+        }
+      },
+      "reviewsSummary": {
+        
+      },
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {
+        
+      }
+    },
+    "analytics": {
+      
+    },
+    "cta": {
+      "link": "https://www.swiggy.com/restaurants/shiraz-golden-restaurant-park-street-beniapukur-kolkata-4430",
+      "type": "WEBLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "18107",
+      "name": "Bhojohori Manna",
+      "cloudinaryImageId": "17d6b518e586e760d9ca4ad0de775d9e",
+      "locality": "Esplanade",
+      "areaName": "Bentinck St.",
+      "costForTwo": "₹900 for two",
+      "cuisines": [
+        "Bengali"
+      ],
+      "avgRating": 3.9,
+      "feeDetails": {
+        "restaurantId": "18107",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 3500
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 3500
+      },
+      "parentId": "113",
+      "avgRatingString": "3.9",
+      "totalRatingsString": "1K+",
+      "sla": {
+        "deliveryTime": 34,
+        "lastMileTravel": 1.8,
+        "serviceability": "SERVICEABLE",
+        "slaString": "34 mins",
+        "lastMileTravelString": "1.8 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-08-10 22:30:00",
+        "opened": true
+      },
+      "badges": {
+        
+      },
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "imageBased": {
+            
+          },
+          "textBased": {
+            
+          },
+          "textExtendedBadges": {
+            
+          }
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "10% OFF",
+        "subHeader": "UPTO ₹40",
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {
+          
+        },
+        "subTitle": {
+          
+        },
+        "message": {
+          
+        },
+        "customIcon": {
+          
+        }
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {
+            
+          },
+          "video": {
+            
+          }
+        }
+      },
+      "reviewsSummary": {
+        
+      },
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {
+        
+      }
+    },
+    "analytics": {
+      
+    },
+    "cta": {
+      "link": "https://www.swiggy.com/restaurants/bhojohori-manna-esplanade-bentinck-st-kolkata-18107",
+      "type": "WEBLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "19521",
+      "name": "Tea Junction",
+      "cloudinaryImageId": "77d2fffe27cd59af5045a102d08af522",
+      "locality": "Lindsay Street",
+      "areaName": "New Market Area",
+      "costForTwo": "₹150 for two",
+      "cuisines": [
+        "Beverages",
+        "Snacks",
+        "Desserts"
+      ],
+      "avgRating": 4.4,
+      "feeDetails": {
+        "restaurantId": "19521",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 3000
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 3000
+      },
+      "parentId": "4311",
+      "avgRatingString": "4.4",
+      "totalRatingsString": "1K+",
+      "sla": {
+        "deliveryTime": 26,
+        "lastMileTravel": 2.5,
+        "serviceability": "SERVICEABLE",
+        "slaString": "26 mins",
+        "lastMileTravelString": "2.5 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-08-10 21:45:00",
+        "opened": true
+      },
+      "badges": {
+        
+      },
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "imageBased": {
+            
+          },
+          "textBased": {
+            
+          },
+          "textExtendedBadges": {
+            
+          }
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "30% OFF",
+        "subHeader": "UPTO ₹75",
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {
+          
+        },
+        "subTitle": {
+          
+        },
+        "message": {
+          
+        },
+        "customIcon": {
+          
+        }
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {
+            
+          },
+          "video": {
+            
+          }
+        }
+      },
+      "reviewsSummary": {
+        
+      },
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {
+        
+      }
+    },
+    "analytics": {
+      
+    },
+    "cta": {
+      "link": "https://www.swiggy.com/restaurants/tea-junction-lindsay-street-new-market-area-kolkata-19521",
+      "type": "WEBLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "239456",
+      "name": "Kouzina Express",
+      "cloudinaryImageId": "e4c9e5c6548a1acecd194890aabfe6be",
+      "locality": "Sector 1",
+      "areaName": "Salt Lake",
+      "costForTwo": "₹500 for two",
+      "cuisines": [
+        "North Indian",
+        "Chinese",
+        "Biryani"
+      ],
+      "avgRating": 4.1,
+      "feeDetails": {
+        "restaurantId": "239456",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 6300
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 6300
+      },
+      "parentId": "18594",
+      "avgRatingString": "4.1",
+      "totalRatingsString": "5K+",
+      "sla": {
+        "deliveryTime": 36,
+        "lastMileTravel": 6.6,
+        "serviceability": "SERVICEABLE",
+        "slaString": "36 mins",
+        "lastMileTravelString": "6.6 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-08-10 22:45:00",
+        "opened": true
+      },
+      "badges": {
+        
+      },
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "imageBased": {
+            
+          },
+          "textBased": {
+            
+          },
+          "textExtendedBadges": {
+            
+          }
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "20% OFF",
+        "subHeader": "ABOVE ₹900",
+        "discountTag": "FLAT DEAL",
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {
+          
+        },
+        "subTitle": {
+          
+        },
+        "message": {
+          
+        },
+        "customIcon": {
+          
+        }
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {
+            
+          },
+          "video": {
+            
+          }
+        }
+      },
+      "reviewsSummary": {
+        
+      },
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {
+        
+      }
+    },
+    "analytics": {
+      
+    },
+    "cta": {
+      "link": "https://www.swiggy.com/restaurants/kouzina-express-sector-1-salt-lake-kolkata-239456",
+      "type": "WEBLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "54741",
+      "name": "Cakes Gariahat",
+      "cloudinaryImageId": "otsr1m2octbkcnwxcsiv",
+      "areaName": "Gariahat",
+      "costForTwo": "₹200 for two",
+      "cuisines": [
+        "Bakery",
+        "Desserts"
+      ],
+      "avgRating": 4.7,
+      "feeDetails": {
+        "restaurantId": "54741",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 6800
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 6800
+      },
+      "parentId": "375071",
+      "avgRatingString": "4.7",
+      "totalRatingsString": "10K+",
+      "sla": {
+        "deliveryTime": 36,
+        "lastMileTravel": 6.8,
+        "serviceability": "SERVICEABLE",
+        "slaString": "36 mins",
+        "lastMileTravelString": "6.8 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-08-10 21:00:00",
+        "opened": true
+      },
+      "badges": {
+        
+      },
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "imageBased": {
+            
+          },
+          "textBased": {
+            
+          },
+          "textExtendedBadges": {
+            
+          }
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {
+          
+        },
+        "subTitle": {
+          
+        },
+        "message": {
+          
+        },
+        "customIcon": {
+          
+        }
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {
+            
+          },
+          "video": {
+            
+          }
+        }
+      },
+      "reviewsSummary": {
+        
+      },
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {
+        
+      }
+    },
+    "analytics": {
+      
+    },
+    "cta": {
+      "link": "https://www.swiggy.com/restaurants/cakes-gariahat-gariahat-kolkata-54741",
+      "type": "WEBLINK"
+    }
+  }
+]
