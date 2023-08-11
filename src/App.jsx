@@ -8,7 +8,7 @@ import { Footer } from "./components/Footer";
 import Error from "./components/Error";
 import About from "./pages/About";
 import SignIn from "./pages/SignIn";
-import ResturantMenu from "./components/ResturantMenu";
+import ResturantMenu from "./components/AllMenuCard";
 
 function App() {
   return (

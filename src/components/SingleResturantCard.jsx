@@ -23,7 +23,7 @@ const SingleResturantCard = ({
           <span className='mx-1'>{avgRating}</span>
         </h1>
 
-        <div className='mt-4'>
+        <div key={id} className='mt-4'>
        { cuisines.map((cusine)=>{
 return(
  <span className='mb-2 mr-2 inline-block rounded-full  bg-gray-300 px-3 py-1 text-[10px] font-bold text-gray-900'>

@@ -1,6 +1,8 @@
 export const IMG_CDN_URL =
   "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 
+export const MENU_IMG_CDN_URL="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/"  
+
 export const FETCH_MENU_URL =
   "https://www.swiggy.com/mapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=22.572646&lng=88.36389500000001&restaurantId=";
 
@@ -2351,3 +2353,756 @@ export const resturantList = [
     }
   }
 ]
+
+
+export const menuCards = [
+  {
+    "card": {
+      "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+      "info": {
+        "id": "37535609",
+        "name": "CHICKEN TANDOORI(FULL)4PCS",
+        "category": "TANDOORI & KABABS",
+        "description": "Serves 1",
+        "imageId": "e0649de73fa04fa819e8fa2ffe56b22b",
+        "inStock": 1,
+        "price": 39000,
+        "variants": {
+          
+        },
+        "variantsV2": {
+          
+        },
+        "itemAttribute": {
+          "portionSize": "Serves 1"
+        },
+        "ribbon": {
+          
+        },
+        "showImage": true,
+        "itemBadge": {
+          
+        },
+        "badgesV2": {
+          
+        },
+        "ratings": {
+          "aggregatedRating": {
+            "rating": "4.3",
+            "ratingCount": "1429 ratings",
+            "ratingCountV2": "1429"
+          }
+        }
+      },
+      "analytics": {
+        
+      },
+      "hideRestaurantDetails": true
+    }
+  },
+  {
+    "card": {
+      "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+      "info": {
+        "id": "36094546",
+        "name": "CHICKEN TANGRI KABAB(4 PCS)",
+        "category": "TANDOORI & KABABS",
+        "description": "Serves 1",
+        "imageId": "c91ebbf27723cf2e150f0cead9f9e90c",
+        "inStock": 1,
+        "price": 37000,
+        "variants": {
+          
+        },
+        "variantsV2": {
+          
+        },
+        "itemAttribute": {
+          "portionSize": "Serves 1"
+        },
+        "ribbon": {
+          
+        },
+        "showImage": true,
+        "itemBadge": {
+          
+        },
+        "badgesV2": {
+          
+        },
+        "ratings": {
+          "aggregatedRating": {
+            "rating": "3.9",
+            "ratingCount": "196 ratings",
+            "ratingCountV2": "196"
+          }
+        }
+      },
+      "analytics": {
+        
+      },
+      "hideRestaurantDetails": true
+    }
+  },
+  {
+    "card": {
+      "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+      "info": {
+        "id": "36094737",
+        "name": "MURGH PATIALA(FULL)4PCS",
+        "category": "TANDOORI & KABABS",
+        "description": "Serves 1",
+        "imageId": "9abe7faa0ee78b3261173430221c1857",
+        "inStock": 1,
+        "price": 40000,
+        "variants": {
+          
+        },
+        "variantsV2": {
+          
+        },
+        "itemAttribute": {
+          "portionSize": "Serves 1"
+        },
+        "ribbon": {
+          
+        },
+        "showImage": true,
+        "itemBadge": {
+          
+        },
+        "badgesV2": {
+          
+        },
+        "ratings": {
+          "aggregatedRating": {
+            "rating": "4.5",
+            "ratingCount": "255 ratings",
+            "ratingCountV2": "255"
+          }
+        }
+      },
+      "analytics": {
+        
+      },
+      "hideRestaurantDetails": true
+    }
+  },
+  {
+    "card": {
+      "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+      "info": {
+        "id": "1623478",
+        "name": "ALOO DO PYAZA",
+        "category": "VEGETABLE MAIN COURSE",
+        "description": "Serves 1",
+        "imageId": "41259be0cff041b46ce3ab6421d3f9a2",
+        "inStock": 1,
+        "isVeg": 1,
+        "price": 22500,
+        "variants": {
+          
+        },
+        "variantsV2": {
+          
+        },
+        "itemAttribute": {
+          "vegClassifier": "VEG",
+          "portionSize": "Serves 1"
+        },
+        "ribbon": {
+          "text": "Bestseller",
+          "textColor": "#ffffff",
+          "topBackgroundColor": "#d53d4c",
+          "bottomBackgroundColor": "#b02331"
+        },
+        "showImage": true,
+        "itemBadge": {
+          
+        },
+        "badgesV2": {
+          
+        },
+        "isBestseller": true,
+        "ratings": {
+          "aggregatedRating": {
+            "rating": "4.5",
+            "ratingCount": "8037 ratings",
+            "ratingCountV2": "8037"
+          }
+        }
+      },
+      "analytics": {
+        
+      },
+      "hideRestaurantDetails": true
+    }
+  },
+  {
+    "card": {
+      "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+      "info": {
+        "id": "1623498",
+        "name": "PANEER BUTTER MASALA",
+        "category": "PANEER MAIN COURSE",
+        "description": "Serves 1",
+        "imageId": "65b4fd6997d4c89d79c9a053e83ee490",
+        "inStock": 1,
+        "isVeg": 1,
+        "price": 26500,
+        "variants": {
+          
+        },
+        "variantsV2": {
+          
+        },
+        "itemAttribute": {
+          "vegClassifier": "VEG",
+          "portionSize": "Serves 1"
+        },
+        "ribbon": {
+          "text": "Bestseller",
+          "textColor": "#ffffff",
+          "topBackgroundColor": "#d53d4c",
+          "bottomBackgroundColor": "#b02331"
+        },
+        "showImage": true,
+        "itemBadge": {
+          
+        },
+        "badgesV2": {
+          
+        },
+        "isBestseller": true,
+        "ratings": {
+          "aggregatedRating": {
+            "rating": "4.1",
+            "ratingCount": "5779 ratings",
+            "ratingCountV2": "5779"
+          }
+        }
+      },
+      "analytics": {
+        
+      },
+      "hideRestaurantDetails": true
+    }
+  },
+  {
+    "card": {
+      "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+      "info": {
+        "id": "1623497",
+        "name": "KADAI PANEER",
+        "category": "PANEER MAIN COURSE",
+        "description": "Serves 1",
+        "imageId": "6d499322c04059ae3d0feccfba2aac80",
+        "inStock": 1,
+        "isVeg": 1,
+        "price": 27000,
+        "variants": {
+          
+        },
+        "variantsV2": {
+          
+        },
+        "itemAttribute": {
+          "vegClassifier": "VEG",
+          "portionSize": "Serves 1"
+        },
+        "ribbon": {
+          
+        },
+        "showImage": true,
+        "itemBadge": {
+          
+        },
+        "badgesV2": {
+          
+        },
+        "ratings": {
+          "aggregatedRating": {
+            "rating": "4.2",
+            "ratingCount": "3210 ratings",
+            "ratingCountV2": "3210"
+          }
+        }
+      },
+      "analytics": {
+        
+      },
+      "hideRestaurantDetails": true
+    }
+  },
+  {
+    "card": {
+      "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+      "info": {
+        "id": "1623505",
+        "name": "EGG TARKA",
+        "category": "EGG MAIN COURSE",
+        "description": "Serves 1",
+        "imageId": "9228c81b33c51c71e603148026d48801",
+        "inStock": 1,
+        "price": 16500,
+        "variants": {
+          
+        },
+        "variantsV2": {
+          
+        },
+        "itemAttribute": {
+          "vegClassifier": "NONVEG",
+          "portionSize": "Serves 1"
+        },
+        "ribbon": {
+          
+        },
+        "showImage": true,
+        "itemBadge": {
+          
+        },
+        "badgesV2": {
+          
+        },
+        "ratings": {
+          "aggregatedRating": {
+            "rating": "4.4",
+            "ratingCount": "5661 ratings",
+            "ratingCountV2": "5661"
+          }
+        }
+      },
+      "analytics": {
+        
+      },
+      "hideRestaurantDetails": true
+    }
+  },
+  {
+    "card": {
+      "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+      "info": {
+        "id": "1623516",
+        "name": "CHICKEN BHARTA",
+        "category": "CHICKEN MAIN COURSE(BONE 2PCS&BONELESS 6PCS)",
+        "description": "Serves 1",
+        "imageId": "371469975737778969174e664058064a",
+        "inStock": 1,
+        "price": 28000,
+        "variants": {
+          
+        },
+        "variantsV2": {
+          
+        },
+        "itemAttribute": {
+          "vegClassifier": "NONVEG",
+          "portionSize": "Serves 1"
+        },
+        "ribbon": {
+          "text": "Bestseller",
+          "textColor": "#ffffff",
+          "topBackgroundColor": "#d53d4c",
+          "bottomBackgroundColor": "#b02331"
+        },
+        "showImage": true,
+        "itemBadge": {
+          
+        },
+        "badgesV2": {
+          
+        },
+        "isBestseller": true,
+        "ratings": {
+          "aggregatedRating": {
+            "rating": "4.4",
+            "ratingCount": "10451 ratings",
+            "ratingCountV2": "10451"
+          }
+        }
+      },
+      "analytics": {
+        
+      },
+      "hideRestaurantDetails": true
+    }
+  },
+  {
+    "card": {
+      "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+      "info": {
+        "id": "36094489",
+        "name": "GARLIC NAN",
+        "category": "ROTI",
+        "description": "Serves 1",
+        "imageId": "ae4c6cbcc8ad295146980eca4e532cd2",
+        "inStock": 1,
+        "isVeg": 1,
+        "price": 11000,
+        "variants": {
+          
+        },
+        "variantsV2": {
+          
+        },
+        "itemAttribute": {
+          "vegClassifier": "VEG",
+          "portionSize": "Serves 1"
+        },
+        "ribbon": {
+          
+        },
+        "showImage": true,
+        "itemBadge": {
+          
+        },
+        "badgesV2": {
+          
+        },
+        "ratings": {
+          "aggregatedRating": {
+            "rating": "4.3",
+            "ratingCount": "869 ratings",
+            "ratingCountV2": "869"
+          }
+        }
+      },
+      "analytics": {
+        
+      },
+      "hideRestaurantDetails": true
+    }
+  },
+  {
+    "card": {
+      "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+      "info": {
+        "id": "1623551",
+        "name": "DAL MAKHANI",
+        "category": "DAL/TARKA",
+        "description": "Serves 1",
+        "imageId": "604542c6772af08cf96be8d07fd95ca0",
+        "inStock": 1,
+        "isVeg": 1,
+        "price": 19000,
+        "variants": {
+          
+        },
+        "variantsV2": {
+          
+        },
+        "itemAttribute": {
+          "vegClassifier": "VEG",
+          "portionSize": "Serves 1"
+        },
+        "ribbon": {
+          "text": "Bestseller",
+          "textColor": "#ffffff",
+          "topBackgroundColor": "#d53d4c",
+          "bottomBackgroundColor": "#b02331"
+        },
+        "showImage": true,
+        "itemBadge": {
+          
+        },
+        "badgesV2": {
+          
+        },
+        "isBestseller": true,
+        "ratings": {
+          "aggregatedRating": {
+            "rating": "4.4",
+            "ratingCount": "16152 ratings",
+            "ratingCountV2": "16152"
+          }
+        }
+      },
+      "analytics": {
+        
+      },
+      "hideRestaurantDetails": true
+    }
+  },
+  {
+    "card": {
+      "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+      "info": {
+        "id": "1623595",
+        "name": "MIXED FRIED RICE",
+        "category": "Chinese",
+        "description": "Serves 1",
+        "imageId": "ce17ce6d1fb1d2bc8d1b75b4a19507cf",
+        "inStock": 1,
+        "price": 31000,
+        "variants": {
+          
+        },
+        "variantsV2": {
+          
+        },
+        "itemAttribute": {
+          "vegClassifier": "NONVEG",
+          "portionSize": "Serves 1"
+        },
+        "ribbon": {
+          
+        },
+        "showImage": true,
+        "itemBadge": {
+          
+        },
+        "badgesV2": {
+          
+        },
+        "ratings": {
+          "aggregatedRating": {
+            "rating": "4.6",
+            "ratingCount": "653 ratings",
+            "ratingCountV2": "653"
+          }
+        }
+      },
+      "analytics": {
+        
+      },
+      "hideRestaurantDetails": true
+    }
+  },
+  {
+    "card": {
+      "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+      "info": {
+        "id": "36094577",
+        "name": "CHILLI PANEER(CHINESE)8PCS",
+        "category": "Chinese",
+        "description": "Serves 1",
+        "imageId": "3f62c723af9036a89983d732923b0c41",
+        "inStock": 1,
+        "isVeg": 1,
+        "price": 28000,
+        "variants": {
+          
+        },
+        "variantsV2": {
+          
+        },
+        "itemAttribute": {
+          "vegClassifier": "VEG",
+          "portionSize": "Serves 1"
+        },
+        "ribbon": {
+          
+        },
+        "showImage": true,
+        "itemBadge": {
+          
+        },
+        "badgesV2": {
+          
+        },
+        "ratings": {
+          "aggregatedRating": {
+            "rating": "4.5",
+            "ratingCount": "136 ratings",
+            "ratingCountV2": "136"
+          }
+        }
+      },
+      "analytics": {
+        
+      },
+      "hideRestaurantDetails": true
+    }
+  },
+  {
+    "card": {
+      "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+      "info": {
+        "id": "36094601",
+        "name": "CHILLI CHICKEN BONLESS(8PCS)",
+        "category": "Chinese",
+        "description": "Serves 1",
+        "imageId": "9b3b0f7cb6b3f530bde2efdf57a6e31a",
+        "inStock": 1,
+        "price": 29000,
+        "variants": {
+          
+        },
+        "variantsV2": {
+          
+        },
+        "itemAttribute": {
+          "vegClassifier": "NONVEG",
+          "portionSize": "Serves 1"
+        },
+        "ribbon": {
+          
+        },
+        "showImage": true,
+        "itemBadge": {
+          
+        },
+        "badgesV2": {
+          
+        },
+        "ratings": {
+          "aggregatedRating": {
+            "rating": "4.3",
+            "ratingCount": "494 ratings",
+            "ratingCountV2": "494"
+          }
+        }
+      },
+      "analytics": {
+        
+      },
+      "hideRestaurantDetails": true
+    }
+  },
+  {
+    "card": {
+      "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+      "info": {
+        "id": "1623448",
+        "name": "PANEER TIKKA ROLL",
+        "category": "VEG SNACKS/FAT FREE ROLL",
+        "description": "Serves 1",
+        "imageId": "110dfea46ea47ba5e48d3bc347491973",
+        "inStock": 1,
+        "isVeg": 1,
+        "price": 16000,
+        "variants": {
+          
+        },
+        "variantsV2": {
+          
+        },
+        "itemAttribute": {
+          "vegClassifier": "VEG",
+          "portionSize": "Serves 1"
+        },
+        "ribbon": {
+          "text": "Bestseller",
+          "textColor": "#ffffff",
+          "topBackgroundColor": "#d53d4c",
+          "bottomBackgroundColor": "#b02331"
+        },
+        "showImage": true,
+        "itemBadge": {
+          
+        },
+        "badgesV2": {
+          
+        },
+        "isBestseller": true,
+        "ratings": {
+          "aggregatedRating": {
+            "rating": "4.4",
+            "ratingCount": "4030 ratings",
+            "ratingCountV2": "4030"
+          }
+        }
+      },
+      "analytics": {
+        
+      },
+      "hideRestaurantDetails": true
+    }
+  },
+  {
+    "card": {
+      "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+      "info": {
+        "id": "36094521",
+        "name": "PANEER TIKKA KABAB(6PCS)",
+        "category": "VEG SNACKS/FAT FREE ROLL",
+        "description": "Serves 1",
+        "imageId": "279964a1df2f69ee5b9a71ab489e45b7",
+        "inStock": 1,
+        "isVeg": 1,
+        "price": 29000,
+        "variants": {
+          
+        },
+        "variantsV2": {
+          
+        },
+        "itemAttribute": {
+          "vegClassifier": "VEG",
+          "portionSize": "Serves 1"
+        },
+        "ribbon": {
+          
+        },
+        "showImage": true,
+        "itemBadge": {
+          
+        },
+        "badgesV2": {
+          
+        },
+        "ratings": {
+          "aggregatedRating": {
+            "rating": "4.5",
+            "ratingCount": "398 ratings",
+            "ratingCountV2": "398"
+          }
+        }
+      },
+      "analytics": {
+        
+      },
+      "hideRestaurantDetails": true
+    }
+  },
+  {
+    "card": {
+      "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+      "info": {
+        "id": "1623456",
+        "name": "CHICKEN TIKKA ROLL",
+        "category": "NON VEG SNACKS/FAT FREE ROLL",
+        "description": "Serves 1",
+        "imageId": "8a0054874a4f0af032ffde584dab475a",
+        "inStock": 1,
+        "price": 16000,
+        "variants": {
+          
+        },
+        "variantsV2": {
+          
+        },
+        "itemAttribute": {
+          "vegClassifier": "NONVEG",
+          "portionSize": "Serves 1"
+        },
+        "ribbon": {
+          "text": "Bestseller",
+          "textColor": "#ffffff",
+          "topBackgroundColor": "#d53d4c",
+          "bottomBackgroundColor": "#b02331"
+        },
+        "showImage": true,
+        "itemBadge": {
+          
+        },
+        "badgesV2": {
+          
+        },
+        "isBestseller": true,
+        "ratings": {
+          "aggregatedRating": {
+            "rating": "4.5",
+            "ratingCount": "5616 ratings",
+            "ratingCountV2": "5616"
+          }
+        }
+      },
+      "analytics": {
+        
+      },
+      "hideRestaurantDetails": true
+    }
+  }
+] 
