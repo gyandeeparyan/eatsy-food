@@ -11,7 +11,7 @@ const SingleResturantCard = ({
   areaName,
 }) => {
   return (
-    <div key={id} className='w-[300px] rounded-2xl border mb-8 shadow-md'>
+    <div key={id} className='w-[300px] rounded-2xl mb-8 '>
       <img
         src={IMG_CDN_URL + cloudinaryImageId}
         alt='resturant image'
@@ -24,7 +24,7 @@ const SingleResturantCard = ({
         </h1>
 
         <div key={id} className='mt-4'>
-       { cuisines.map((cusine)=>{
+       { cuisines.slice(0, 3).map((cusine)=>{
 return(
  <span className='mb-2 mr-2 inline-block rounded-full  bg-gray-300 px-3 py-1 text-[10px] font-bold text-gray-900'>
             {cusine}

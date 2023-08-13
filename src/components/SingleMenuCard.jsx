@@ -1,57 +1,56 @@
-import { ArrowUpRight } from 'lucide-react'
-import React from 'react'
+
+
 import { IMG_CDN_URL, MENU_IMG_CDN_URL } from '../constants/constants'
-import { Star } from 'lucide-react'
+
+
+import React from 'react'
+import { Trash, Heart } from 'lucide-react'
+
 
 
 function SingleMenuCard({name,id,category,description,imageId,price,ratings}) {
   return (
-    <div className='container mx-5'>
-   
-<div className="flex max-w-2xl mt-6 mb-6 flex-row  rounded-lg shadow-md border-2 md:flex-row mx-auto items-center">
-      <div className="h-[150px] w-[50%] md:h-[200px] md:w-[50%]">
-        <img
-          src={IMG_CDN_URL+imageId}
-          alt="food"
-          className="h-full w-full rounded-lg object-cover mx-2"
-        />
-      </div>
-      <div>
-        <div className="p-4 mx-2">
-          <h1 className="inline-flex items-center text-lg font-semibold">
-           {name}
-          </h1>
-          <br />
-          <h1 className="inline-flex items-center text-lg font-semibold">
-          ₹ {price/100}
-          </h1>
-          <p className="mt-3 text-sm text-gray-600">
-           {description}
-          </p>
-          <div className="mt-4">
-            <span className="mb-2 mr-2 inline-block rounded-full bg-red-200 px-3 py-1 text-[10px] font-bold text-gray-900">
-              {category}
-            </span>
-            <span className="mb-2 mr-2 inline-block rounded-full bg-white px-3 py-1 text-[10px] font-bold text-gray-900">
-            {ratings?.aggregatedRating?.rating} <span className='text-green-600'>★</span> 
-           
-         
-            </span>
-          </div>
-          <div className="mt-3 flex items-center space-x-2">
-            
-          <button
-      type="button"
-      class="mt-4 w-full rounded-lg bg-red-500 px-2 py-1.5 text-sm font-bold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-    >
-      ADD TO CART
-    </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
+    <div className="mx-auto flex max-w-3xl flex-col  my-4 p-2 px-2 sm: sm:px-2">
+     
+      <ul className="flex flex-col divide-y divide-gray-200">
+  
+          <li key={id} className="flex flex-col py-6 sm:flex-row sm:justify-between">
+            <div className="flex w-full space-x-2  sm:space-x-4">
+              <img
+                className="h-20 w-20 flex-shrink-0 rounded-2xl object-contain outline-none dark:border-transparent sm:h-32 sm:w-32"
+                src={IMG_CDN_URL+imageId}
+                alt={name}
+              />
+              <div className="flex w-full flex-col justify-between pb-4">
+                <div className="flex w-full justify-between space-x-2 pb-2">
+                  <div className="space-y-1">
+                    <h3 className="text-lg font-semibold leading-snug sm:pr-8">{name}</h3>
+                    <p className="text-sm">{}</p>
+                  </div>
+                  <div className="text-right">
+                    <p className="text-lg font-semibold">₹{price/100}</p>
+                  </div>
+                </div>
+                <div className="flex divide-x text-sm">
+                  <button type="button" className=" bg-red-500 text-white font-semibold items-center space-x-2 px-2 py-1 rounded-md">
+                    
+                    ADD TO CART
+                  </button>
+                  <button type="button" className="flex items-center space-x-2 px-2 py-1">
+                    <Heart size={16} />
+                    <span>Add to favorites</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </li>
+        
+      </ul>
     
+      <div className="flex justify-end space-x-4">
+       
+      </div>
+    </div>
   )
 }
 
