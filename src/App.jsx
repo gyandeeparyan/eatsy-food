@@ -1,14 +1,18 @@
-import React from "react";
+import React, { Suspense,lazy } from "react";
 import ReactDOM from "react-dom/client";
 import "./App.css";
 import { Navbar } from "./components/Navbar";
-import { createBrowserRouter, RouterProvider ,Outlet } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import AllResturantList from "./components/AllResturantList";
 import { Footer } from "./components/Footer";
 import Error from "./components/Error";
-import About from "./pages/About";
 import SignIn from "./pages/SignIn";
 import ResturantMenu from "./components/AllMenuCard";
+
+
+
+
+const About =lazy(()=>import("./pages/About"))
 
 function App() {
   return (
@@ -30,7 +34,11 @@ const appRouter = createBrowserRouter([
     children: [
       {
         path: "/about",
-        element: <About />,
+        element: (
+          <Suspense fallback={<Error/>}>
+            <About />
+          </Suspense>
+        ),
       },
       {
         path: "/signin",
@@ -38,7 +46,7 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/",
-        element: <AllResturantList/>,
+        element: <AllResturantList />,
       },
       {
         path: "/resturant/:resId",
@@ -49,10 +57,7 @@ const appRouter = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-
-    <RouterProvider router={appRouter} />
-
+  <RouterProvider router={appRouter} />
 );
-
 
 export default App;

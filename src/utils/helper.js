@@ -15,4 +15,18 @@ export function filterData(searchText, resturants) {
     return filterData;
   }
   
+  export const filterCusine = (category,allResturants) => {
+    if (category === 'all') { 
+    console.log(category);
+    return(allResturants);
+    }
+    else{
+      const newItems = allResturants.filter((item) => item?.info?.cuisines.includes(category))
+      console.log(newItems);
+      return (newItems);
+    }
+ 
+  };
+
+
 

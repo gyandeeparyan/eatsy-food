@@ -11,7 +11,7 @@ const SingleResturantCard = ({
   areaName,
 }) => {
   return (
-    <div key={id} className='w-[300px] rounded-2xl border mb-8'>
+    <div key={id} className='w-[300px] rounded-2xl border mb-8 shadow-md'>
       <img
         src={IMG_CDN_URL + cloudinaryImageId}
         alt='resturant image'
@@ -31,7 +31,7 @@ return(
           </span>
 )})}
           <br />
-          <span className='mb-2 mr-2 inline-block rounded-full bg-orange-400 px-3 py-1 text-[10px] font-bold text-gray-900'>
+          <span className='mb-2 mr-2 inline-block rounded-full bg-red-500 px-3 py-1 text-[10px] font-bold text-white'>
             {areaName}
           </span>
         </div>

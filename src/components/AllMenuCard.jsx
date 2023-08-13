@@ -13,37 +13,43 @@ const RestaurantMenu = () => {
   // how to read a dynamic URL params
   const { resId } = useParams();
   // Use proper names
-  const[filteredMenu,setFilteredMenu] =useState([]);
-  const [allMenu, setAllMenu] = useState([]);
+  const[filteredMenu,setFilteredMenu] =useState(menuCards);
+  const [allMenu, setAllMenu] = useState(menuCards);
   const [searchText, setSearchText] = useState("");
 
-  useEffect(() => {
-    getRestaurantInfo();
-  }, []);
+  // useEffect(() => {
+  //   getRestaurantInfo();
+  // }, []);
 
-  async function getRestaurantInfo() {
-    try {
-      setLoading(true);
-      const data = await fetch(
-    FETCH_MENU_URL+`${resId}+&submitAction=ENTER`
-      );
-      const json = await data.json();
-      console.log(json.data);
-      console.log(menuCards);
-      console.log(json.data?.cards[3]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards);
-      setAllMenu(json.data?.cards[3]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards);
-      setFilteredMenu(menuCards)
-      setLoading(false)
-    } catch (error) {
-      setLoading(false)
-      setAllMenu(menuCards)
-      setFilteredMenu(menuCards)
+  // async function getRestaurantInfo() {
+  //   try {
+  //     setLoading(true);
+  //     const data = await fetch(
+  //   FETCH_MENU_URL+`${resId}+&submitAction=ENTER`
+  //     );
+  //     const json = await data.json();
+  //     console.log(json.data);
+  //     console.log(menuCards);
+  //     console.log(json.data?.cards[3]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards);
+  //     setAllMenu(json.data?.cards[3]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards);
+  //     setFilteredMenu(menuCards)
+  //     setLoading(false)
+  //   } catch (error) {
+  //     setLoading(false)
+  //     setAllMenu(menuCards)
+  //     setFilteredMenu(menuCards)
       
      
-      console.log(error);
+  //     console.log(error);
       
-    }
+  //   }
     
+  // }
+
+
+  const handleSearch =()=>{
+    const data = filterMenu(searchText, allMenu);
+    setFilteredMenu(data);
   }
 
   return loading ? (
@@ -59,14 +65,13 @@ const RestaurantMenu = () => {
           value={searchText}
           onChange={(e) => {
             setSearchText(e.target.value);
+            handleSearch();
+
           }}
         ></input>
         <button
           type='button'
-          onClick={() => {
-            const data = filterMenu(searchText, allMenu);
-            setFilteredMenu(data);
-          }}
+          onClick={handleSearch}
           className='rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black'
         >
           Search

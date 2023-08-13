@@ -29,7 +29,8 @@ export function Navbar() {
     <div className='relative w-full bg-white mb-6'>
       <div className='mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8'>
         <div className='inline-flex items-center space-x-2'>
-          <span className='font-bold'>eatsy</span>
+          <Link to={"/"}><span className='font-extrabold text-5xl text-red-500 '>eatsy</span></Link>
+          
         </div>
         <div className='hidden lg:block'>
           <ul className='inline-flex space-x-8'>
@@ -48,7 +49,7 @@ export function Navbar() {
         <div className='hidden lg:block'>
           <button
             type='button'
-            className='rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black'
+            className='rounded-md bg-red-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black'
           >
             Github
           </button>

@@ -8,7 +8,7 @@ function SingleMenuCard({name,id,category,description,imageId,price,ratings}) {
   return (
     <div className='container mx-5'>
    
-<div className="flex max-w-2xl mt-6 mb-6 flex-row  rounded-lg border-red-700 border-2 md:flex-row mx-auto items-center">
+<div className="flex max-w-2xl mt-6 mb-6 flex-row  rounded-lg shadow-md border-2 md:flex-row mx-auto items-center">
       <div className="h-[150px] w-[50%] md:h-[200px] md:w-[50%]">
         <img
           src={IMG_CDN_URL+imageId}
@@ -29,7 +29,7 @@ function SingleMenuCard({name,id,category,description,imageId,price,ratings}) {
            {description}
           </p>
           <div className="mt-4">
-            <span className="mb-2 mr-2 inline-block rounded-full bg-yellow-400 px-3 py-1 text-[10px] font-bold text-gray-900">
+            <span className="mb-2 mr-2 inline-block rounded-full bg-red-200 px-3 py-1 text-[10px] font-bold text-gray-900">
               {category}
             </span>
             <span className="mb-2 mr-2 inline-block rounded-full bg-white px-3 py-1 text-[10px] font-bold text-gray-900">
@@ -42,7 +42,7 @@ function SingleMenuCard({name,id,category,description,imageId,price,ratings}) {
             
           <button
       type="button"
-      class="mt-4 w-full rounded-lg bg-red-600 px-2 py-1.5 text-sm font-bold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+      class="mt-4 w-full rounded-lg bg-red-500 px-2 py-1.5 text-sm font-bold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
     >
       ADD TO CART
     </button>
