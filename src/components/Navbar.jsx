@@ -3,6 +3,9 @@
 import React from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+
+
 const menuItems = [
   {
     name: "Home",
@@ -16,17 +19,18 @@ const menuItems = [
     name: "SignIn",
     href: "/signin",
   },
+  
 ];
 
-export function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-
+function Navbar() {
+const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+const cartItems =useSelector(store=>store.cart.items);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <div className='relative w-full bg-white mb-6'>
+    <div className='relative w-full sticky top-0 bg-white z-40 mb-6'>
       <div className='mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8'>
         <div className='inline-flex items-center space-x-2'>
           <Link to={"/"}><span className='font-extrabold text-5xl text-red-500 '>eatsy</span></Link>
@@ -42,8 +46,17 @@ export function Navbar() {
                 >
                   {item.name}
                 </Link>
+
               </li>
             ))}
+
+            <li>
+              <Link to={"/cart"}
+               className='text-sm font-semibold text-gray-800 hover:text-gray-900'
+               >
+                Cart {cartItems.length}
+              </Link>
+            </li>
           </ul>
         </div>
         <div className='hidden lg:block'>
@@ -51,7 +64,7 @@ export function Navbar() {
             type='button'
             className='rounded-md bg-red-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black'
           >
-            Github
+            Github 
           </button>
         </div>
         <div className='lg:hidden'>
@@ -105,3 +118,5 @@ export function Navbar() {
     </div>
   );
 }
+
+export default Navbar;

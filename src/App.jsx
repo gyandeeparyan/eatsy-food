@@ -1,27 +1,29 @@
-import React, { Suspense,lazy } from "react";
+import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
 import "./App.css";
-import { Navbar } from "./components/Navbar";
+import Navbar from "./components/Navbar";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import AllResturantList from "./components/AllResturantList";
 import { Footer } from "./components/Footer";
 import Error from "./components/Error";
 import SignIn from "./pages/SignIn";
 import ResturantMenu from "./components/AllMenuCard";
+import Cart from "./components/Cart";
+import { Provider } from "react-redux";
 
-
-
-
-const About =lazy(()=>import("./pages/About"))
+const About = lazy(() => import("./pages/About"));
+import store from "./utils/store";
 
 function App() {
   return (
     <>
-      <Navbar />
+      <Provider store={store}>
+        <Navbar />
 
-      <Outlet />
+        <Outlet />
 
-      <Footer />
+        <Footer />
+      </Provider>
     </>
   );
 }
@@ -35,7 +37,7 @@ const appRouter = createBrowserRouter([
       {
         path: "/about",
         element: (
-          <Suspense fallback={<Error/>}>
+          <Suspense fallback={<Error />}>
             <About />
           </Suspense>
         ),
@@ -43,6 +45,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/signin",
         element: <SignIn />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
       {
         path: "/",

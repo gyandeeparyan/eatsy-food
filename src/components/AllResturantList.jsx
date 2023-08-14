@@ -90,7 +90,7 @@ const AllResturantList = () => {
       </div>
 
       <div className='mx-2 my-2'>
-        {filteredCusine.slice(0, 13).map((item) => {
+        {filteredCusine.slice(0, 15).map((item) => {
           return (
             <button
               className='bg-white text-black font-semibold rounded-3xl border-2 border-black px-3 p-2 m-2 active:border-none focus:bg-red-500 focus:border-red-500 focus:text-white focus:font-bold'

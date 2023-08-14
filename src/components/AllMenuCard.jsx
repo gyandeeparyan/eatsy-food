@@ -87,7 +87,7 @@ const RestaurantMenu = () => {
 <div className="container mx-auto md:mx-auto">
   
        {(filteredMenu).map((item) => (
-      <SingleMenuCard key={item?.card?.info?.id} {...item?.card?.info}/>
+      <SingleMenuCard key={item?.card?.info?.id} {...item?.card?.info} item={item?.card?.info}/>
       ))}
     </div>
 </>

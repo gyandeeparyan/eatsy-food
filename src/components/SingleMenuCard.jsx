@@ -5,10 +5,22 @@ import { IMG_CDN_URL, MENU_IMG_CDN_URL } from '../constants/constants'
 
 import React from 'react'
 import { Trash, Heart } from 'lucide-react'
+import { useDispatch } from 'react-redux'
+import { addItem } from '../utils/cartSlice'
 
 
 
-function SingleMenuCard({name,id,category,description,imageId,price,ratings}) {
+function SingleMenuCard({name,id,category,description,imageId,price,ratings,item}) {
+
+const dispatch=useDispatch()
+
+
+const handleFoodItem=(foodItem)=>{
+dispatch(addItem(foodItem))
+console.log(foodItem);
+}
+
+
   return (
     <div className="mx-auto flex max-w-3xl flex-col  my-4 p-2 px-2 sm: sm:px-2">
      
@@ -32,7 +44,9 @@ function SingleMenuCard({name,id,category,description,imageId,price,ratings}) {
                   </div>
                 </div>
                 <div className="flex divide-x text-sm">
-                  <button type="button" className=" bg-red-500 text-white font-semibold items-center space-x-2 px-2 py-1 rounded-md">
+                  <button type="button" 
+                  onClick={()=>handleFoodItem(item)}
+                  className=" bg-red-500 text-white font-semibold items-center space-x-2 px-2 py-1 rounded-md">
                     
                     ADD TO CART
                   </button>
