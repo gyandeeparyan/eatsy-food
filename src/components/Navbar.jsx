@@ -4,7 +4,7 @@ import React from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-
+import { ShoppingBag } from 'lucide-react';
 
 const menuItems = [
   {
@@ -34,8 +34,15 @@ const cartItems =useSelector(store=>store.cart.items);
       <div className='mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8'>
         <div className='inline-flex items-center space-x-2'>
           <Link to={"/"}><span className='font-extrabold text-5xl text-red-500 '>eatsy</span></Link>
+          <Link to={"/cart"}>
+          <div className="flex mt-3 lg:hidden">
+                <ShoppingBag />
+                <span className="bg-red-500 px-2 ml-1  rounded-full  text-white"> {cartItems.length} </span>
+          </div>
+          </Link>
           
         </div>
+       
         <div className='hidden lg:block'>
           <ul className='inline-flex space-x-8'>
             {menuItems.map((item) => (
@@ -51,10 +58,14 @@ const cartItems =useSelector(store=>store.cart.items);
             ))}
 
             <li>
-              <Link to={"/cart"}
-               className='text-sm font-semibold text-gray-800 hover:text-gray-900'
+              <Link to={"/cart" }
+               className='text-sm font-semibold  text-gray-800 hover:text-gray-900'
                >
-                Cart {cartItems.length}
+                <div className="flex">
+                <ShoppingBag />
+                <span className="bg-red-500 px-2 ml-1 rounded-full  text-white"> {cartItems.length} </span>
+                </div>
+                  
               </Link>
             </li>
           </ul>
@@ -68,15 +79,18 @@ const cartItems =useSelector(store=>store.cart.items);
           </button>
         </div>
         <div className='lg:hidden'>
+           
           <Menu onClick={toggleMenu} className='h-6 w-6 cursor-pointer' />
         </div>
+       
         {isMenuOpen && (
           <div className='absolute inset-x-0 top-0 z-50 origin-top-right transform p-2 transition lg:hidden'>
-            <div className='divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5'>
+                
+            <div className='divide-y-2 divide-gray-50 rounded-2xl bg-white shadow-lg ring-1 ring-black ring-opacity-5'>
               <div className='px-5 pb-6 pt-5'>
                 <div className='flex items-center justify-between'>
                   <div className='inline-flex items-center space-x-2'>
-                    <span className='font-bold'>eatsy</span>
+                  <Link to={"/"}><span className='font-extrabold text-5xl text-red-500 '>eatsy</span></Link>
                   </div>
                   <div className='-mr-2'>
                     <button
@@ -102,14 +116,15 @@ const cartItems =useSelector(store=>store.cart.items);
                         </span>
                       </Link>
                     ))}
+                    <Link to={"/cart"}>
+          <div className="flex  ml-2">
+                <ShoppingBag />
+                <span className="bg-red-500 px-2 ml-1  rounded-full  text-white"> {cartItems.length} </span>
+          </div>
+          </Link>
                   </nav>
                 </div>
-                <button
-                  type='button'
-                  className='mt-4 w-full rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black'
-                >
-                  Github
-                </button>
+         
               </div>
             </div>
           </div>

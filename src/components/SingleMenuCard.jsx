@@ -17,6 +17,7 @@ const dispatch=useDispatch()
 
 const handleFoodItem=(foodItem)=>{
 dispatch(addItem(foodItem))
+
 console.log(foodItem);
 }
 
