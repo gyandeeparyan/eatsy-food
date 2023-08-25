@@ -1,5 +1,5 @@
 import { Heart, Trash } from 'lucide-react'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { clearCart ,decrease,removeItem ,increase} from '../utils/cartSlice';
 import { IMG_CDN_URL } from '../constants/constants';
@@ -17,8 +17,19 @@ setEmpty(true)
 
 
 const handleRemove=(item)=>{
+if(cartItems.items.length === 1){
+  dispatch(removeItem(item))
+  setEmpty(true)
+}  
 dispatch(removeItem(item))
 }
+
+
+useEffect(()=>{
+if(cartItems.items.length ===0){
+  setEmpty(true)
+}
+},[cartItems.items])
 
   return (
  

@@ -7,16 +7,15 @@ import { CardSkeleton } from "./CardSkeleton";
 import { resturantList } from "../constants/constants";
 import SearchInput from "./Search";
 
-import { filtertext } from './../constants/constants';
+import { filtertext } from "./../constants/constants";
 import FilterLabels from "./FilterLabels";
 import FilterModal from "./FilterModal";
 import { useSelector } from "react-redux";
 
 const AllResturantList = () => {
+  const resturant = useSelector((store) => store.filter.items);
 
-const resturant=useSelector((store)=>store.filter.items)  
-
-const allUniqueCusineList = [
+  const allUniqueCusineList = [
     "all",
     ...new Set(
       resturantList.flatMap((restaurant) => restaurant?.info?.cuisines)
@@ -25,12 +24,16 @@ const allUniqueCusineList = [
   const [filteredCusine, setfilteredCuisine] = useState(allUniqueCusineList);
   const [category, setCategory] = useState();
 
-  const [allResturants, setAllResturants] = useState(resturant);
-  const [filteredResturants, setFilteredResturants] = useState(resturant);
+  const [allResturants, setAllResturants] = useState(
+    useSelector((store) => store.filter.items)
+  );
+  const [filteredResturants, setFilteredResturants] = useState(
+    useSelector((store) => store.filter.items)
+  );
   const [searchText, setSearchText] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const filterLabels= filtertext
+  const filterLabels = filtertext;
 
   const url = `https://www.swiggy.com/mapi/restaurants/list/v5?offset=0&is-seo-homepage-enabled=true&lat=22.572646&lng=88.36389500000001&carousel=true&third_party_vendor=1`;
   // useEffect(() => {
@@ -66,12 +69,13 @@ const allUniqueCusineList = [
 
   const openModal = () => {
     setIsModalOpen(true);
+    console.log(typeof resturant);
+    console.log(typeof filteredResturants);
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
   };
-
 
   const handleSearch = () => {
     const data = filterData(searchText, allResturants);
@@ -90,7 +94,12 @@ const allUniqueCusineList = [
     <CardSkeleton />
   ) : (
     <>
-    <SearchInput openModal={openModal} searchText={searchText} setSearchText={setSearchText} handleSearch={handleSearch}  />
+      <SearchInput
+        openModal={openModal}
+        searchText={searchText}
+        setSearchText={setSearchText}
+        handleSearch={handleSearch}
+      />
 
       <div className='mx-2 my-2  whitespace-nowrap overflow-x-auto scrollbar-hide '>
         {filteredCusine.map((item) => {
@@ -104,7 +113,7 @@ const allUniqueCusineList = [
           );
         })}
 
-{/* <div className="flex overflow-x-auto ">
+        {/* <div className="flex overflow-x-auto ">
 <button
               className='bg-white text-black  font-semibold rounded-xl border-2 border-gray-300 p-2  m-2 active:border-none  focus:border-red-500 '
               onClick={openModal}
@@ -119,7 +128,6 @@ const allUniqueCusineList = [
             </button>
        <FilterLabels filterLabels={filterLabels}/>
   </div> */}
-         
       </div>
       <FilterModal isOpen={isModalOpen} onClose={closeModal} />
       <div className='container m-10 grid grid-cols-1 md:grid-cols-4'>
