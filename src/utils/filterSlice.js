@@ -44,7 +44,11 @@ const filterSlice = createSlice({
     cuisineFilters: [],
     deliveryFilter: null,
     filterCount:0,
-
+    sortSubcategorySelected: false,
+    costSubcategorySelected: false,
+    ratingSubcategorySelected: false,
+    cusineSubcategorySelected: false,
+    deliverySubcategorySelected: false,
  // New state variables to track selected subcategories for each filter
  selectedSortSubcategory: SORT_OPTIONS.LOW_TO_HIGH,
  selectedCostSubcategory: null,
@@ -60,28 +64,66 @@ const filterSlice = createSlice({
       console.log(state.costFilter);
       console.log(typeof resturantList);
 console.log(typeof resturants);
+const selectedSortSubcategory = action.payload;
+
+if (!state.sortSubcategorySelected) {
+  state.selectedSortSubcategory = selectedSortSubcategory;
+  state.sortSubcategorySelected = true;
+  state.filterCount += 1;
+}
+
     },
     setCostFilter: (state, action) => {
       state.costFilter = action.payload;
       console.log(state.items);
+      const selectedSortSubcategory = action.payload;
+
+      if (!state.costSubcategorySelected) {
+        state.selectedSortSubcategory = selectedSortSubcategory;
+        state.costSubcategorySelected = true;
+        state.filterCount += 1;
+      }
     },
     setRatingFilter: (state, action) => {
       state.ratingFilter = action.payload;
       console.log(state.items);
+      const selectedSortSubcategory = action.payload;
+
+      if (!state.ratingSubcategorySelected) {
+        state.selectedSortSubcategory = selectedSortSubcategory;
+        state.ratingSubcategorySelected = true;
+        state.filterCount += 1;
+      }
     },
     toggleCuisineFilter: (state, action) => {
       const cuisine = action.payload;
       const index = state.cuisineFilters.indexOf(cuisine);
-
+      
       if (index === -1) {
         state.cuisineFilters.push(cuisine);
       } else {
         state.cuisineFilters.splice(index, 1);
       }
+
+      const selectedSortSubcategory = action.payload;
+
+      if (!state.cusineSubcategorySelected) {
+        state.selectedSortSubcategory = selectedSortSubcategory;
+        state.cusineSubcategorySelected = true;
+        state.filterCount += 1;
+      }
     },
     setDeliveryFilter: (state, action) => {
       state.deliveryFilter = action.payload;
       console.log(state.items);
+
+      const selectedSortSubcategory = action.payload;
+
+      if (!state.deliverySubcategorySelected) {
+        state.selectedSortSubcategory = selectedSortSubcategory;
+        state.deliverySubcategorySelected = true;
+        state.filterCount += 1;
+      }
     },
 
      // New reducers to update the selected subcategories
@@ -112,13 +154,13 @@ console.log(typeof resturants);
       // Sorting logic
 switch (sortBy) {
   case SORT_OPTIONS.LOW_TO_HIGH:
-    filteredAndSortedItems.sort((a, b) => a.info.feeDetails.fees.totalFee - b.info.feeDetails.fees.totalFee);
+    filteredAndSortedItems.sort((a, b) => a.info.feeDetails.fees[0].fee - b.info.feeDetails.fees[0].fee);
     console.log("L-H SORT CALLED");
     
     break;
 
   case SORT_OPTIONS.HIGH_TO_LOW:
-    filteredAndSortedItems.sort((a, b) => b.info.feeDetails.fees.totalFee - a.info.feeDetails.fees.totalFee);
+    filteredAndSortedItems.sort((a, b) => b.info.feeDetails.fees[0].fee - a.info.feeDetails.fees[0].fee);
     console.log("H-L SORT CALLED");
     break;
 
@@ -134,17 +176,17 @@ switch (sortBy) {
 // Filtering logic for cost
 switch (costFilter) {
   case COST_OPTIONS.RS_300_TO_RS_600:
-    filteredAndSortedItems = filteredAndSortedItems.filter(item => item.info.feeDetails.fees.totalFee >= 300 && item.info.feeDetails.fees.totalFee <= 600);
+    filteredAndSortedItems = filteredAndSortedItems.filter(item => item.info.feeDetails.fees[0].fee >= 3000 && item.info.feeDetails.fees[0].fee <= 6000);
     console.log("300-600 SORT CALLED");
     break;
 
   case COST_OPTIONS.GREATER_THAN_RS_600:
-    filteredAndSortedItems = filteredAndSortedItems.filter(item => item.info.feeDetails.fees.totalFee > 600);
+    filteredAndSortedItems = filteredAndSortedItems.filter(item => item.info.feeDetails.fees[0].fee > 6000);
     console.log(">600 SORT CALLED");
     break;
 
   case COST_OPTIONS.LESS_THAN_RS_300:
-    filteredAndSortedItems = filteredAndSortedItems.filter(item => item.info.feeDetails.fees.totalFee < 300);
+    filteredAndSortedItems = filteredAndSortedItems.filter(item => item.info.feeDetails.fees[0].fee < 3000);
     console.log("<300 SORT CALLED");
     break;
 

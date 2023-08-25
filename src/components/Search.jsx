@@ -1,8 +1,9 @@
 import React  from 'react';
 import { Filter, FilterIcon } from 'lucide-react';
+import {  useSelector } from 'react-redux/es/hooks/useSelector';
 function SearchInput({ searchText, setSearchText, handleSearch , openModal}) {
 
-
+  const filterCount = useSelector((store) => store.filter.filterCount);
 
   return (
     <>
@@ -20,7 +21,7 @@ function SearchInput({ searchText, setSearchText, handleSearch , openModal}) {
       />
 
 <div className='flex cursor-pointer' onClick={openModal}>
-    <span className="bg-red-500 px-2 ml-1  rounded-full  text-white"> 1</span>
+    <span className="bg-red-500 px-2 ml-1  rounded-full  text-white"> {filterCount}</span>
     <FilterIcon/>
     </div>
     </div>

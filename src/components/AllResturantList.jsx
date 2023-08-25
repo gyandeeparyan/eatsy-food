@@ -131,7 +131,7 @@ const AllResturantList = () => {
       </div>
       <FilterModal isOpen={isModalOpen} onClose={closeModal} />
       <div className='container m-10 grid grid-cols-1 md:grid-cols-4'>
-        {filteredResturants.map((resturant) => {
+        {resturant.map((resturant) => {
           return (
             <Link
               to={"/resturant/" + resturant.info.id}
