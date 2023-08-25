@@ -2355,6 +2355,20 @@ export const resturantList = [
 ]
 
 
+export const filtertext=[
+
+
+
+"Ratings 4.0+",
+"Fast Delivery",
+"₹300 - ₹600",
+"Less than ₹300"
+
+
+
+]
+
+
 export const menuCards = [
   {
     "card": {
@@ -3106,3 +3120,667 @@ export const menuCards = [
     }
   }
 ] 
+
+
+
+export const sortConfigs = [
+  {
+  "key": "relevance",
+  "title": "Relevance (Default)",
+  "selected": true,
+  "defaultSelection": true
+  },
+  {
+  "key": "deliveryTimeAsc",
+  "title": "Delivery Time"
+  },
+  {
+  "key": "modelBasedRatingDesc",
+  "title": "Rating"
+  },
+  {
+  "key": "costForTwoAsc",
+  "title": "Cost: Low to High"
+  },
+  {
+  "key": "costForTwoDesc",
+  "title": "Cost: High to Low"
+  }
+  ]
+
+export  const facetList = [
+  {
+  "label": "Delivery Time",
+  "id": "deliveryTime",
+  "selection": "SELECT_TYPE_MULTISELECT",
+  "facetInfo": [
+  {
+  "label": "Fast Delivery",
+  "id": "deliveryTimefacetquery1",
+  "analytics": {},
+  "openFilter": true
+  }
+  ],
+  "viewType": "VIEW_TYPE_HALF_CARD",
+  "subLabel": "Filter by"
+  },]
+
+
+export const filters = {
+    "card": {
+    "card": {
+    "@type": "type.googleapis.com/swiggy.gandalf.widgets.v2.InlineViewFilterSortWidget",
+    "sortConfigs": [
+    {
+    "key": "relevance",
+    "title": "Relevance (Default)",
+    "selected": true,
+    "defaultSelection": true
+    },
+    {
+    "key": "deliveryTimeAsc",
+    "title": "Delivery Time"
+    },
+    {
+    "key": "modelBasedRatingDesc",
+    "title": "Rating"
+    },
+    {
+    "key": "costForTwoAsc",
+    "title": "Cost: Low to High"
+    },
+    {
+    "key": "costForTwoDesc",
+    "title": "Cost: High to Low"
+    }
+    ],
+    "restaurantCount": 1850,
+    "facetList": [
+    {
+    "label": "Delivery Time",
+    "id": "deliveryTime",
+    "selection": "SELECT_TYPE_MULTISELECT",
+    "facetInfo": [
+    {
+    "label": "Fast Delivery",
+    "id": "deliveryTimefacetquery1",
+    "analytics": {},
+    "openFilter": true
+    }
+    ],
+    "viewType": "VIEW_TYPE_HALF_CARD",
+    "subLabel": "Filter by"
+    },
+    {
+    "label": "Cuisines",
+    "id": "catalog_cuisines",
+    "selection": "SELECT_TYPE_MULTISELECT",
+    "facetInfo": [
+    {
+    "label": "American",
+    "id": "query_american",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Andhra",
+    "id": "query_andhra",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Arabian",
+    "id": "query_arabian",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Asian",
+    "id": "query_asian",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Awadhi",
+    "id": "query_awadhi",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Bakery",
+    "id": "query_bakery",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Bangladeshi",
+    "id": "query_bangladeshi",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Barbecue",
+    "id": "query_barbecue",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Bengali",
+    "id": "query_bengali",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Beverages",
+    "id": "query_beverages",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Bhutanese",
+    "id": "query_bhutanese",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Bihari",
+    "id": "query_bihari",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Biryani",
+    "id": "query_biryani",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Burgers",
+    "id": "query_burgers",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Burmese",
+    "id": "query_burmese",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Cafe",
+    "id": "query_cafe",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Chaat",
+    "id": "query_chaat",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Chinese",
+    "id": "query_chinese",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Combo",
+    "id": "query_combo",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Continental",
+    "id": "query_continental",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Desserts",
+    "id": "query_desserts",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "European",
+    "id": "query_european",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Fast Food",
+    "id": "query_fast_food",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Free Delivery",
+    "id": "query_free_delivery",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "French",
+    "id": "query_french",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Goan",
+    "id": "query_goan",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Grill",
+    "id": "query_grill",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Healthy Food",
+    "id": "query_healthy_food",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Home Food",
+    "id": "query_home_food",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Hyderabadi",
+    "id": "query_hyderabadi",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Ice Cream",
+    "id": "query_ice_cream",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Ice Cream Cakes",
+    "id": "query_ice_cream_cakes",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Indian",
+    "id": "query_indian",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Indonesian",
+    "id": "query_indonesian",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Italian",
+    "id": "query_italian",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Italian-American",
+    "id": "query_italian-american",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Jain",
+    "id": "query_jain",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Japanese",
+    "id": "query_japanese",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Juices",
+    "id": "query_juices",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Kebabs",
+    "id": "query_kebabs",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Kerala",
+    "id": "query_kerala",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Keto",
+    "id": "query_keto",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Korean",
+    "id": "query_korean",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Lebanese",
+    "id": "query_lebanese",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Limited Stocks!",
+    "id": "query_limited_stocks!",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Lucknowi",
+    "id": "query_lucknowi",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Malaysian",
+    "id": "query_malaysian",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Meat",
+    "id": "query_meat",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Mediterranean",
+    "id": "query_mediterranean",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Mexican",
+    "id": "query_mexican",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Middle Eastern",
+    "id": "query_middle_eastern",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Mughlai",
+    "id": "query_mughlai",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Nepalese",
+    "id": "query_nepalese",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "North Eastern",
+    "id": "query_north_eastern",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "North Indian",
+    "id": "query_north_indian",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Oriental",
+    "id": "query_oriental",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Paan",
+    "id": "query_paan",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Pan-Asian",
+    "id": "query_pan-asian",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Pastas",
+    "id": "query_pastas",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Pizzas",
+    "id": "query_pizzas",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Punjabi",
+    "id": "query_punjabi",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Rajasthani",
+    "id": "query_rajasthani",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Salads",
+    "id": "query_salads",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Seafood",
+    "id": "query_seafood",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Singaporean",
+    "id": "query_singaporean",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Snacks",
+    "id": "query_snacks",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "South Indian",
+    "id": "query_south_indian",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Steakhouse",
+    "id": "query_steakhouse",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Street Food",
+    "id": "query_street_food",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Sushi",
+    "id": "query_sushi",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Sweets",
+    "id": "query_sweets",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Tandoor",
+    "id": "query_tandoor",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Thai",
+    "id": "query_thai",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Thalis",
+    "id": "query_thalis",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Tibetan",
+    "id": "query_tibetan",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Tribal",
+    "id": "query_tribal",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Turkish",
+    "id": "query_turkish",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Waffle",
+    "id": "query_waffle",
+    "analytics": {},
+    "openFilter": true
+    }
+    ],
+    "viewType": "VIEW_TYPE_HALF_CARD",
+    "canSearch": true,
+    "subLabel": "Filter by cuisine",
+    "openFilter": true
+    },
+    {
+    "label": "Explore",
+    "id": "explore",
+    "selection": "SELECT_TYPE_MULTISELECT",
+    "facetInfo": [
+    {
+    "label": "New on Swiggy",
+    "id": "newfacetquery1",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Swiggy Exclusives",
+    "id": "isExclusivefacetquery1",
+    "analytics": {}
+    }
+    ],
+    "viewType": "VIEW_TYPE_HALF_CARD"
+    },
+    {
+    "label": "Ratings",
+    "id": "rating",
+    "selection": "SELECT_TYPE_MULTISELECT",
+    "facetInfo": [
+    {
+    "label": "Ratings 4.5+",
+    "id": "ratingfacetquery3",
+    "analytics": {}
+    },
+    {
+    "label": "Ratings 4.0+",
+    "id": "ratingfacetquery4",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Ratings 3.5+",
+    "id": "ratingfacetquery5",
+    "analytics": {}
+    }
+    ],
+    "viewType": "VIEW_TYPE_HALF_CARD",
+    "subLabel": "Filter by"
+    },
+    {
+    "label": "Veg/Non-Veg",
+    "id": "isVeg",
+    "selection": "SELECT_TYPE_SINGLESELECT",
+    "facetInfo": [
+    {
+    "label": "Pure Veg",
+    "id": "isVegfacetquery2",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Non Veg",
+    "id": "isVegfacetquery3",
+    "analytics": {}
+    }
+    ],
+    "viewType": "VIEW_TYPE_FLATTENED",
+    "subLabel": "Filter by"
+    },
+    {
+    "label": "Cost for two",
+    "id": "costForTwo",
+    "selection": "SELECT_TYPE_MULTISELECT",
+    "facetInfo": [
+    {
+    "label": "Rs. 300-Rs. 600",
+    "id": "costForTwofacetquery3",
+    "analytics": {},
+    "openFilter": true
+    },
+    {
+    "label": "Greater than Rs. 600",
+    "id": "costForTwofacetquery4",
+    "analytics": {}
+    },
+    {
+    "label": "Less than Rs. 300",
+    "id": "costForTwofacetquery5",
+    "analytics": {},
+    "openFilter": true
+    }
+    ],
+    "viewType": "VIEW_TYPE_HALF_CARD",
+    "subLabel": "Filter by"
+    }
+    ]
+    }
+    }
+    }

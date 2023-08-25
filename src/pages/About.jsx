@@ -1,7 +1,10 @@
 import React from "react";
+import FilterModal from "../components/FilterModal";
 
 const About = () => {
-  return <div>About</div>;
+  return <>
+  <FilterModal/>
+  </>;
 };
 
 export default About;

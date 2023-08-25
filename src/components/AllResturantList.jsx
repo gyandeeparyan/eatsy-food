@@ -5,9 +5,18 @@ import { filterData, filterCusine } from "../utils/helper";
 import { useState, useEffect } from "react";
 import { CardSkeleton } from "./CardSkeleton";
 import { resturantList } from "../constants/constants";
+import SearchInput from "./Search";
+
+import { filtertext } from './../constants/constants';
+import FilterLabels from "./FilterLabels";
+import FilterModal from "./FilterModal";
+import { useSelector } from "react-redux";
 
 const AllResturantList = () => {
-  const allUniqueCusineList = [
+
+const resturant=useSelector((store)=>store.filter.items)  
+
+const allUniqueCusineList = [
     "all",
     ...new Set(
       resturantList.flatMap((restaurant) => restaurant?.info?.cuisines)
@@ -16,10 +25,12 @@ const AllResturantList = () => {
   const [filteredCusine, setfilteredCuisine] = useState(allUniqueCusineList);
   const [category, setCategory] = useState();
 
-  const [allResturants, setAllResturants] = useState(resturantList);
-  const [filteredResturants, setFilteredResturants] = useState(resturantList);
+  const [allResturants, setAllResturants] = useState(resturant);
+  const [filteredResturants, setFilteredResturants] = useState(resturant);
   const [searchText, setSearchText] = useState("");
   const [loading, setLoading] = useState(false);
+
+  const filterLabels= filtertext
 
   const url = `https://www.swiggy.com/mapi/restaurants/list/v5?offset=0&is-seo-homepage-enabled=true&lat=22.572646&lng=88.36389500000001&carousel=true&third_party_vendor=1`;
   // useEffect(() => {
@@ -51,6 +62,16 @@ const AllResturantList = () => {
   //     setFilteredResturants(resturantList);
   //   }
   // };
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
 
   const handleSearch = () => {
     const data = filterData(searchText, allResturants);
@@ -69,22 +90,10 @@ const AllResturantList = () => {
     <CardSkeleton />
   ) : (
     <>
-      <div className='flex w-full mt-2 mb-9 items-center space-x-2 md:w-1/3 mx-auto'>
-        <input
-          className='flex h-10 w-3/4 rounded-3xl mx-auto  border-4  border-red-500 bg-transparent px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-black/30 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50'
-          type='text'
-          placeholder='Search'
-          value={searchText}
-          onChange={(e) => {
-            setSearchText(e.target.value);
-            handleSearch();
-          }}
-        ></input>
-       
-      </div>
+    <SearchInput searchText={searchText} setSearchText={setSearchText} handleSearch={handleSearch}  />
 
       <div className='mx-2 my-2'>
-        {filteredCusine.slice(0, 15).map((item) => {
+        {/* {filteredCusine.slice(0, 15).map((item) => {
           return (
             <button
               className='bg-white text-black font-semibold rounded-3xl border-2 border-black px-3 p-2 m-2 active:border-none focus:bg-red-500 focus:border-red-500 focus:text-white focus:font-bold'
@@ -93,9 +102,26 @@ const AllResturantList = () => {
               {item}
             </button>
           );
-        })}
-      </div>
+        })} */}
 
+<div className="flex overflow-x-auto ">
+<button
+              className='bg-white text-black  font-semibold rounded-xl border-2 border-gray-300 p-2  m-2 active:border-none  focus:border-red-500 '
+              onClick={openModal}
+            >
+       <span className="bg-red-500 px-2 ml-1  rounded-full  text-white"> 1</span>   Filter 
+            </button>
+        <button
+              className='bg-white text-black font-semibold rounded-xl border-2 border-gray-300 p-2  m-2 active:border-none focus:bg-red-500 focus:border-red-500 focus:text-white focus:font-bold'
+              onClick={() => handleFilter(item)}
+            >
+            Sort By
+            </button>
+       <FilterLabels filterLabels={filterLabels}/>
+  </div>
+         
+      </div>
+      <FilterModal isOpen={isModalOpen} onClose={closeModal} />
       <div className='container m-10 grid grid-cols-1 md:grid-cols-4'>
         {filteredResturants.map((resturant) => {
           return (
