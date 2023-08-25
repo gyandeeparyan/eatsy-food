@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from 'react-redux';
 import { setSortBy, setCostFilter, setRatingFilter, toggleCuisineFilter, setDeliveryFilter, sortAndFilterItems } from '../utils/filterSlice';
-
+import { X } from "lucide-react";
 const filterLabels = {
   sortBy: { id: 'sort', label: 'Sort By' },
   ratings: { id: 'ratings', label: 'Ratings' },
@@ -64,9 +64,9 @@ const FilterModal = ({ isOpen, onClose }) => {
               <h2 className="mt-4 m-3 font-bold text-2xl text-slate-700">Filters</h2>
               <button
                 onClick={onClose}
-                className='mt-4 bg-red-500 text-white m-3 px-2 rounded-xl'
+                className='mt-4 bg-red-500 hover:bg-red-400 text-white m-3 p-2 rounded-full'
               >
-                CLOSE
+                <X />
               </button>
             </div>
             

@@ -90,26 +90,26 @@ const allUniqueCusineList = [
     <CardSkeleton />
   ) : (
     <>
-    <SearchInput searchText={searchText} setSearchText={setSearchText} handleSearch={handleSearch}  />
+    <SearchInput openModal={openModal} searchText={searchText} setSearchText={setSearchText} handleSearch={handleSearch}  />
 
-      <div className='mx-2 my-2'>
-        {/* {filteredCusine.slice(0, 15).map((item) => {
+      <div className='mx-2 my-2  whitespace-nowrap overflow-x-auto scrollbar-hide '>
+        {filteredCusine.map((item) => {
           return (
             <button
-              className='bg-white text-black font-semibold rounded-3xl border-2 border-black px-3 p-2 m-2 active:border-none focus:bg-red-500 focus:border-red-500 focus:text-white focus:font-bold'
+              className='bg-white text-black font-semibold rounded-3xl border-2 border-black px-4 py-2  m-2 active:border-none focus:bg-red-500 focus:border-red-500 focus:text-white focus:font-bold'
               onClick={() => handleFilter(item)}
             >
               {item}
             </button>
           );
-        })} */}
+        })}
 
-<div className="flex overflow-x-auto ">
+{/* <div className="flex overflow-x-auto ">
 <button
               className='bg-white text-black  font-semibold rounded-xl border-2 border-gray-300 p-2  m-2 active:border-none  focus:border-red-500 '
               onClick={openModal}
             >
-       <span className="bg-red-500 px-2 ml-1  rounded-full  text-white"> 1</span>   Filter 
+          Filter 
             </button>
         <button
               className='bg-white text-black font-semibold rounded-xl border-2 border-gray-300 p-2  m-2 active:border-none focus:bg-red-500 focus:border-red-500 focus:text-white focus:font-bold'
@@ -118,7 +118,7 @@ const allUniqueCusineList = [
             Sort By
             </button>
        <FilterLabels filterLabels={filterLabels}/>
-  </div>
+  </div> */}
          
       </div>
       <FilterModal isOpen={isModalOpen} onClose={closeModal} />
