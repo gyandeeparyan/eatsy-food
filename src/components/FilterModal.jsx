@@ -90,15 +90,15 @@ const FilterModal = ({ isOpen, onClose }) => {
             onClick={onClose}
             className='fixed inset-0 bg-black opacity-60'
           ></div>
-          <div className='bg-white   w-screen md:p-4 rounded-t-3xl md:rounded-3xl md:w-[35%] z-50'>
+          <div className='bg-white   dark:bg-brand-coal dark:text-brand-beige  w-screen md:p-4 rounded-t-3xl md:rounded-3xl md:w-[35%] z-50'>
             {/* <h2 className="text-lg font-semibold mb-2">Modal Content</h2>
             <p>This is the content of the modal.</p>
              */}
 
             <div className='flex justify-between'>
-              <h2 className='mt-4 m-3 font-bold text-2xl text-slate-700'>
+              <h2 className='mt-4 m-3 dark:text-brand-beige font-bold text-2xl text-slate-700'>
                 {" "}
-                <span className='bg-red-500 px-2 ml-1  rounded-full  text-white'>
+                <span className='bg-red-500 px-2 ml-1   rounded-full  text-white'>
                   {" "}
                   {filterCount}
                 </span>{" "}
@@ -127,7 +127,7 @@ const FilterModal = ({ isOpen, onClose }) => {
                     className={`p-1 m-1 rounded-lg cursor-pointer active:bg-red-500 ${
                       currentCategory == category
                         ? "bg-red-500 text-white font-semibold"
-                        : "bg-white text-black"
+                        : "bg-white  dark:bg-brand-coal dark:text-brand-beige text-black"
                     }`}
                   >
                     <input
@@ -153,8 +153,8 @@ const FilterModal = ({ isOpen, onClose }) => {
                       key={subcategory}
                       className={`p-1 m-1 rounded-lg cursor-pointer ${
                         currentSubcategory === subcategory
-                          ? "bg-red-400 text-white font-semibold"
-                          : "bg-white text-black"
+                          ? "bg-red-400  text-white font-semibold"
+                          : "bg-white  dark:bg-brand-coal dark:text-brand-beige text-black"
                       }`}
                     >
                       <input

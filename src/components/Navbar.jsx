@@ -89,7 +89,7 @@ const cartItems =useSelector(store=>store.cart.items);
         {isMenuOpen && (
           <div className='absolute inset-x-0 top-0 z-50 origin-top-right transform p-2 transition lg:hidden'>
                 
-            <div className='divide-y-2 divide-gray-50 rounded-2xl bg-white shadow-lg ring-1 ring-black ring-opacity-5'>
+            <div className='divide-y-2 divide-gray-50 rounded-2xl   dark:bg-brand-coal dark:text-brand-beige bg-white shadow-lg ring-1 ring-black ring-opacity-5'>
               <div className='px-5 pb-6 pt-5'>
                 <div className='flex items-center justify-between'>
                   <div className='inline-flex items-center space-x-2'>
@@ -112,9 +112,9 @@ const cartItems =useSelector(store=>store.cart.items);
                       <Link
                         key={item.name}
                         to={item.href}
-                        className='-m-3 flex items-center rounded-md p-3 text-sm font-semibold hover:bg-gray-50'
+                        className='-m-3  flex items-center rounded-md p-3 text-sm font-semibold hover:bg-gray-50'
                       >
-                        <span className='ml-3 text-base font-medium text-gray-900'>
+                        <span className='ml-3 text-base  dark:text-brand-beige font-medium text-gray-900'>
                           {item.name}
                         </span>
                       </Link>

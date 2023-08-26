@@ -43,7 +43,7 @@ console.log(foodItem);
                 <div className="flex w-full justify-between space-x-2 pb-2">
                   <div className="space-y-1">
                     <h3 className="text-lg font-semibold leading-snug sm:pr-8">{name}</h3>
-                    <p className="text-sm">{}</p>
+                    <p className="text-sm"></p>
                   </div>
                   <div className="text-right">
                     <p className="text-lg font-semibold">₹{price/100}</p>
