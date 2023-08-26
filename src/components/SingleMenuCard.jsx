@@ -17,6 +17,11 @@ const dispatch=useDispatch()
 
 const handleFoodItem=(foodItem)=>{
 dispatch(addItem(foodItem))
+if ("vibrate" in navigator) {
+  // vibration API supported
+  navigator.vibrate(50);
+}
+
 
 console.log(foodItem);
 }

@@ -22,6 +22,10 @@ if(cartItems.items.length === 1){
   setEmpty(true)
 }  
 dispatch(removeItem(item))
+if ("vibrate" in navigator) {
+  // vibration API supported
+  navigator.vibrate(50);
+}
 }
 
 

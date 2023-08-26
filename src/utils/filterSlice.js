@@ -136,6 +136,7 @@ const filterSlice = createSlice({
       }
     },
     setDeliveryFilter: (state, action) => {
+      
       state.deliveryFilter = action.payload;
       console.log(state.items);
 
@@ -165,6 +166,11 @@ const filterSlice = createSlice({
       state.selectedDeliverySubcategory = action.payload;
     },
     sortAndFilterItems: (state,action) => {
+      if ("vibrate" in navigator) {
+        // vibration API supported
+        navigator.vibrate(50);
+      }
+
       const { sortBy, costFilter, ratingFilter, cuisineFilters, deliveryFilter,items } = state;
       console.log(items);
       let filteredAndSortedItems = [...items];
@@ -255,6 +261,8 @@ if (deliveryFilter === DELIVERY_OPTIONS.FASTEST_DELIVERY) {
       console.log(typeof(filteredAndSortedItems))
       console.log(state.items);
     },
+
+    
   },
 });
 
