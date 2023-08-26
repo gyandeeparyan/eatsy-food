@@ -58,20 +58,42 @@ const filterSlice = createSlice({
 
   },
   reducers: {
+    
+    setSearchedItem: (state,{payload})=>{
+      state.items= payload
+    },
+    
+    setCusineFiltered:(state,{payload})=>{
+     state.items= payload
+    },
     setSortBy: (state, action) => {
       state.sortBy = action.payload;
       console.log(state.items);
       console.log(state.costFilter);
       console.log(typeof resturantList);
-console.log(typeof resturants);
-const selectedSortSubcategory = action.payload;
+      console.log(typeof resturants);
+      const selectedSortSubcategory = action.payload;
 
-if (!state.sortSubcategorySelected) {
-  state.selectedSortSubcategory = selectedSortSubcategory;
-  state.sortSubcategorySelected = true;
-  state.filterCount += 1;
+     if (!state.sortSubcategorySelected) {
+     state.selectedSortSubcategory = selectedSortSubcategory;
+     state.sortSubcategorySelected = true;
+     state.filterCount += 1;
 }
 
+    },
+
+    resetFilters:(state,{payload})=>{
+      state.sortBy= SORT_OPTIONS.LOW_TO_HIGH,
+      state.costFilter= null,
+      state.ratingFilter= ' ',
+      state.cuisineFilters= [],
+      state.deliveryFilter= null,
+      state.sortSubcategorySelected= false,
+      state.costSubcategorySelected= false,
+      state.ratingSubcategorySelected= false,
+      state.cusineSubcategorySelected= false,
+      state.deliverySubcategorySelected= false,
+      state.filterCount=0
     },
     setCostFilter: (state, action) => {
       state.costFilter = action.payload;
@@ -242,7 +264,9 @@ export const {
   setRatingFilter,
   toggleCuisineFilter,
   setDeliveryFilter,
-
+  setSearchedItem,
+  resetFilters,
+  setCusineFiltered,
   setSelectedSortSubcategory,
   setSelectedCostSubcategory,
   setSelectedRatingSubcategory,

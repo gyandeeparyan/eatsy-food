@@ -1,70 +1,87 @@
 import React, { useState } from "react";
-import { useDispatch } from 'react-redux';
+import { useDispatch } from "react-redux";
 
-import { setSortBy, setCostFilter, setRatingFilter, toggleCuisineFilter, setDeliveryFilter, sortAndFilterItems , setSelectedSortSubcategory,
+import {
+  setSortBy,
+  setCostFilter,
+  setRatingFilter,
+  toggleCuisineFilter,
+  setDeliveryFilter,
+  sortAndFilterItems,
+  setSelectedSortSubcategory,
   setSelectedCostSubcategory,
   setSelectedRatingSubcategory,
   setSelectedCuisineSubcategory,
-  setSelectedDeliverySubcategory,} from '../utils/filterSlice';
+  setSelectedDeliverySubcategory,
+  resetFilters,
+} from "../utils/filterSlice";
 import { X } from "lucide-react";
+import { useSelector } from "react-redux/es/hooks/useSelector";
 const filterLabels = {
-  sortBy: { id: 'sort', label: 'Sort By' },
-  ratings: { id: 'ratings', label: 'Ratings' },
-  cuisines: { id: 'cuisines', label: 'Cuisines' },
-  costForTwo: { id: 'cost', label: 'Cost for Two' },
-  delivery: { id: 'delivery', label: 'Delivery' },
+  sortBy: { id: "sort", label: "Sort By" },
+  ratings: { id: "ratings", label: "Ratings" },
+ 
+  costForTwo: { id: "cost", label: "Cost for Two" },
+  delivery: { id: "delivery", label: "Delivery" },
 };
 
 const filterSubcategories = {
-  sortBy: ['Low to High', 'High to Low', 'Fastest Delivery'],
-  ratings: ['4.5+', '4.0+', '3.5+'],
-  cuisines: ['Indian', 'Italian', 'Chinese'],
-  costForTwo: ['Rs. 300 - Rs. 600', 'Greater than Rs. 600', 'Less than Rs. 300'],
-  delivery: ['Fastest Delivery'],
+  sortBy: ["Low to High", "High to Low", "Fastest Delivery"],
+  ratings: ["4.5+", "4.0+", "3.5+"],
+  cuisines: ["Indian", "Italian", "Chinese"],
+  costForTwo: [
+    "Rs. 300 - Rs. 600",
+    "Greater than Rs. 600",
+    "Less than Rs. 300",
+  ],
+  delivery: ["Fastest Delivery"],
 };
 
 const FilterModal = ({ isOpen, onClose }) => {
+  const filterCount = useSelector((store) => store.filter.filterCount);
 
   const [currentCategory, setCurrentCategory] = useState(null);
   const initialSubcategory = Object.keys(filterSubcategories)[0];
-  const [currentSubcategory, setCurrentSubcategory] = useState(initialSubcategory);
-
+  const [currentSubcategory, setCurrentSubcategory] =
+    useState(initialSubcategory);
+    const [activeLabel, setActiveLabel] = useState(null);
   const dispatch = useDispatch();
 
   const handleSubcategoryClick = (subcategory) => {
-    
-    if (currentCategory === 'sortBy') {
+    if (currentCategory === "sortBy") {
       dispatch(setSortBy(subcategory)); // Dispatch sort action
       dispatch(sortAndFilterItems()); // Dispatch combined sort and filter action
-    } else if (currentCategory === 'ratings') {
+    } else if (currentCategory === "ratings") {
       dispatch(setRatingFilter(subcategory)); // Dispatch rating filter action
       dispatch(sortAndFilterItems()); // Dispatch combined sort and filter action
-    } else if (currentCategory === 'cuisines') {
+    } else if (currentCategory === "cuisines") {
       dispatch(toggleCuisineFilter(subcategory)); // Dispatch cuisine filter action
       dispatch(sortAndFilterItems()); // Dispatch combined sort and filter action
-    } else if (currentCategory === 'costForTwo') {
+    } else if (currentCategory === "costForTwo") {
       dispatch(setCostFilter(subcategory)); // Dispatch cost filter action
       dispatch(sortAndFilterItems()); // Dispatch combined sort and filter action
-    } else if (currentCategory === 'delivery') {
+    } else if (currentCategory === "delivery") {
       dispatch(setDeliveryFilter(subcategory)); // Dispatch delivery filter action
       dispatch(sortAndFilterItems()); // Dispatch combined sort and filter action
     }
-    if (currentCategory === 'sortBy') {
+    if (currentCategory === "sortBy") {
       dispatch(setSelectedSortSubcategory(subcategory));
-    } else if (currentCategory === 'costForTwo') {
+    } else if (currentCategory === "costForTwo") {
       dispatch(setSelectedCostSubcategory(subcategory));
-    } else if (currentCategory === 'ratings') {
+    } else if (currentCategory === "ratings") {
       dispatch(setSelectedRatingSubcategory(subcategory));
-    } else if (currentCategory === 'cuisines') {
+    } else if (currentCategory === "cuisines") {
       dispatch(setSelectedCuisineSubcategory(subcategory));
-    } else if (currentCategory === 'delivery') {
+    } else if (currentCategory === "delivery") {
       dispatch(setSelectedDeliverySubcategory(subcategory));
     }
   };
-  
 
+  const handleClear = () => {
+    dispatch(resetFilters());
+    dispatch(sortAndFilterItems()); // Dispatch combined sort and filter action
+  };
 
-  
   return (
     <>
       {isOpen && (
@@ -79,74 +96,83 @@ const FilterModal = ({ isOpen, onClose }) => {
              */}
 
             <div className='flex justify-between'>
-              <h2 className="mt-4 m-3 font-bold text-2xl text-slate-700">Filters</h2>
+              <h2 className='mt-4 m-3 font-bold text-2xl text-slate-700'>
+                {" "}
+                <span className='bg-red-500 px-2 ml-1  rounded-full  text-white'>
+                  {" "}
+                  {filterCount}
+                </span>{" "}
+                &nbsp;Filters
+              </h2>
+              <button
+                onClick={handleClear}
+                className='mt-4 bg-red-500 hover:bg-red-400 text-white text-s font-semibold m-3 p-2 rounded-xl'
+              >
+                CLEAR
+              </button>
               <button
                 onClick={onClose}
-                className='mt-4 bg-red-500 hover:bg-red-400 text-white m-3 p-2 rounded-full'
+                className='mt-4 bg-red-500 hover:bg-red-400 text-white m-3 p-2  rounded-full'
               >
                 <X />
               </button>
             </div>
-            
 
-            <div className="flex">
-            <div className='w-1/2 flex flex-col '>
-             
-            {Object.keys(filterLabels).map(category => (
-    <label
-      key={category}
-      className={`p-1 m-1 rounded-lg cursor-pointer ${
-        currentCategory === category
-          ? 'bg-red-500 text-white font-semibold'
-          : 'bg-white text-black'
-      }`}
-    >
-      <input
-        type="radio"
-        name="category"
-        value={category}
-        checked={currentCategory === category}
-        onChange={() => {
-          setCurrentCategory(category);
-          setCurrentSubcategory(null); // Reset subcategory on category change
-        }}
-        className="hidden"
-      />
-      {filterLabels[category].label}
-    </label>
-  ))}
-
-            </div>
-
-           
-              <div className='w-1/2 flex flex-col'>
-              {currentCategory &&
-    filterSubcategories[currentCategory].map(subcategory => (
-      <label
-        key={subcategory}
-        className={`p-1 m-1 rounded-lg cursor-pointer ${
-          currentSubcategory === subcategory
-            ? 'bg-red-500 text-white font-semibold'
-            : 'bg-white text-black'
-        }`}
-      >
-        <input
-          type="radio"
-          name="subcategory"
-          value={subcategory}
-          checked={currentSubcategory === subcategory}
-          onChange={() => handleSubcategoryClick(subcategory)}
-          className="hidden"
-        />
-        {subcategory}
-      </label>
-    ))}
+            <div className='flex'>
+              <div className='w-1/2 flex flex-col '>
+                {Object.keys(filterLabels).map((category) => (
+                  console.log("currentCategory:", currentCategory, "category:", category),
+                  <label
+                    key={category}
+                    className={`p-1 m-1 rounded-lg cursor-pointer active:bg-red-500 ${
+                      currentCategory == category
+                        ? "bg-red-500 text-white font-semibold"
+                        : "bg-white text-black"
+                    }`}
+                  >
+                    <input
+                      type='radio'
+                      name='category'
+                      value={category}
+                      checked={currentCategory === category}
+                      onChange={() => {
+                        setCurrentCategory(category);
+                        setCurrentSubcategory(null); // Reset subcategory on category change
+                      }}
+                      className='hidden'
+                    />
+                   <p className=" active:bg-red-500 active:text-white font-semibold">{filterLabels[category].label} </p> 
+                  </label>
+                ))}
               </div>
 
+              <div className='w-1/2 flex flex-col'>
+                {currentCategory &&
+                  filterSubcategories[currentCategory].map((subcategory) => (
+                    <label
+                      key={subcategory}
+                      className={`p-1 m-1 rounded-lg cursor-pointer ${
+                        currentSubcategory === subcategory
+                          ? "bg-red-400 text-white font-semibold"
+                          : "bg-white text-black"
+                      }`}
+                    >
+                      <input
+                        type='radio'
+                        name='subcategory'
+                        value={subcategory}
+                        checked={currentSubcategory === subcategory}
+                        onChange={() => handleSubcategoryClick(subcategory)}
+                        className='hidden'
+                      />
+                      {subcategory}
+                    </label>
 
+                  )
+                 
+                  )}
+              </div>
             </div>
-
-
           </div>
         </div>
       )}
