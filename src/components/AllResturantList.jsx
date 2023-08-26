@@ -66,6 +66,39 @@ const AllResturantList = () => {
   //   }
   // };
   const [isModalOpen, setIsModalOpen] = useState(false);
+  
+  const locationUrl = 'https://wft-geo-db.p.rapidapi.com/v1/geo/places/%7BplaceId%7D';
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'a722c260famshd1e0217900ba4b5p10d517jsn42b3438f1549',
+		'X-RapidAPI-Host': 'wft-geo-db.p.rapidapi.com'
+	}
+};
+
+
+const handleLocation= async()=>{
+  try {
+    
+    const response = await fetch(locationUrl, options);
+    const result = await response.text();
+    console.log(result);
+   setLoading(false)
+    setLoading(false)
+  } catch (error) {
+    setLoading(false)
+    console.error(error);
+  }
+}
+
+useEffect(()=>{
+setLoading(true)
+handleLocation()
+
+},[])
+
+
+
 
   const openModal = () => {
     setIsModalOpen(true);

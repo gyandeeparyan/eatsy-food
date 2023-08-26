@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { clearCart ,decrease,removeItem ,increase} from '../utils/cartSlice';
 import { IMG_CDN_URL } from '../constants/constants';
 import EmptyCart from './EmptyCart';
-
+import { Link } from 'react-router-dom';
 function Cart() {
 
 const cartItems=useSelector((store)=>store.cart)
@@ -15,6 +15,11 @@ dispatch(clearCart())
 setEmpty(true)
 }
 
+
+const handleOrderNow=()=>{
+  handleClear()
+
+}
 
 const handleRemove=(item)=>{
 if(cartItems.items.length === 1){
@@ -149,11 +154,13 @@ if(cartItems.items.length ===0){
                 
               </div>
             </dl>
-            <button 
-        onClick={handleClear}
+           <Link to='/orderPlaced'>
+           <button 
+        onClick={handleOrderNow}
         className='bg-green-500 dark:bg-brand-green text-white  hover:bg-green-400 px-3 py-1 font-bold rounded-lg mt-5'>
           ORDER NOW
       </button>
+           </Link> 
           </div>
         </section>
       </div>

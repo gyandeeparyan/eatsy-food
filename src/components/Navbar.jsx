@@ -112,7 +112,7 @@ const cartItems =useSelector(store=>store.cart.items);
                       <Link
                         key={item.name}
                         to={item.href}
-                        className='-m-3  flex items-center rounded-md p-3 text-sm font-semibold hover:bg-gray-50'
+                        className='-m-3  flex items-center dark:bg-brand-coal dark:text-brand-beige rounded-md p-3 text-sm font-semibold'
                       >
                         <span className='ml-3 text-base  dark:text-brand-beige font-medium text-gray-900'>
                           {item.name}

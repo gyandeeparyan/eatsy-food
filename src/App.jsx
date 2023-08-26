@@ -13,6 +13,7 @@ import { Provider } from "react-redux";
 
 const About = lazy(() => import("./pages/About"));
 import store from "./utils/store";
+import OrderSuccess from './components/OrderSuccess';
 
 function App() {
   return (
@@ -57,6 +58,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/resturant/:resId",
         element: <ResturantMenu />,
+      },
+      {
+        path: "/orderPlaced",
+        element: <OrderSuccess/>,
       },
     ],
   },

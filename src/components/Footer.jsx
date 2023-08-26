@@ -9,7 +9,7 @@ export function Footer() {
      
       <p className='text-2xl ml-2 font-sans font-bold text-gray-300 md:text-center' >MADE BY FOOD LOVER</p>
      
-      <p className='text-2xl ml-2 font-sans font-bold text-gray-300 md:text-center' >EATSY HQ, MUNGER</p>
+      <p className='text-2xl mb-3 ml-2 font-sans font-bold text-gray-300 md:text-center' >EATSY HQ, MUNGER</p>
     </footer>
   )
 }
