@@ -60,7 +60,7 @@ const RestaurantMenu = () => {
         handleSearch={handleSearch}
       />
      
-      <div className='container mx-auto md:mx-auto'>
+      <div className='container mx-auto  dark:text-brand-beige md:mx-auto'>
         {filteredMenu.map((item) => (
           <SingleMenuCard
             key={item?.card?.info?.id}

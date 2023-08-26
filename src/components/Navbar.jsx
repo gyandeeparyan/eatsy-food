@@ -30,7 +30,7 @@ const cartItems =useSelector(store=>store.cart.items);
   };
 
   return (
-    <div className='relative w-full sticky top-0 bg-white z-40 mb-6'>
+    <div className=' w-full sticky top-0 bg-white  dark:bg-brand-coal dark:text-brand-beige z-40 mb-6'>
       <div className='mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8'>
         <div className='inline-flex items-center space-x-2'>
           <Link to={"/"}><span className='font-extrabold text-5xl text-red-500 '>eatsy</span></Link>
@@ -43,13 +43,13 @@ const cartItems =useSelector(store=>store.cart.items);
           
         </div>
        
-        <div className='hidden lg:block'>
-          <ul className='inline-flex space-x-8'>
+        <div className='hidden lg:block '>
+          <ul className='inline-flex space-x-8 '>
             {menuItems.map((item) => (
               <li key={item.name}>
                 <Link
                   to={item.href}
-                  className='text-sm font-semibold text-gray-800 hover:text-gray-900'
+                  className='text-sm font-semibold text-gray-800  dark:text-brand-beige hover:text-gray-900'
                 >
                   {item.name}
                 </Link>
@@ -62,7 +62,7 @@ const cartItems =useSelector(store=>store.cart.items);
                className='text-sm font-semibold  text-gray-800 hover:text-gray-900'
                >
                 <div className="flex">
-                <ShoppingBag />
+                <ShoppingBag color="grey" />
                 <span className="bg-red-500 px-2 ml-1 rounded-full  text-white"> {cartItems.length} </span>
                 </div>
                   

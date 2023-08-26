@@ -128,7 +128,7 @@ const AllResturantList = () => {
   </div> */}
       </div>
       <FilterModal isOpen={isModalOpen} onClose={closeModal} />
-      <div className='container m-10 grid grid-cols-1 md:grid-cols-4'>
+      <div className='container m-10 grid grid-cols-1 dark:bg-brand-coal dark:text-brand-beige md:grid-cols-4'>
         {resturant.map((resturant) => {
           return (
             <Link
