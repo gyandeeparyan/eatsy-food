@@ -20,12 +20,12 @@ const RATING_OPTIONS = {
   RATING_3_5_PLUS: 3.5,
 };
 
-const CUISINE_OPTIONS = {
-  INDIAN: 'indian',
-  ITALIAN: 'italian',
-  CHINESE: 'chinese',
-  // ... other cuisine options
-};
+// const CUISINE_OPTIONS = {
+//   INDIAN: 'indian',
+//   ITALIAN: 'italian',
+//   CHINESE: 'chinese',
+//   // ... other cuisine options
+// };
 
 const DELIVERY_OPTIONS = {
   FASTEST_DELIVERY: 'Fastest Delivery',
@@ -50,11 +50,6 @@ const filterSlice = createSlice({
     cusineSubcategorySelected: false,
     deliverySubcategorySelected: false,
  // New state variables to track selected subcategories for each filter
- selectedSortSubcategory: SORT_OPTIONS.LOW_TO_HIGH,
- selectedCostSubcategory: null,
- selectedRatingSubcategory: '',
- selectedCuisineSubcategory: [],
- selectedDeliverySubcategory: null,
 
   },
   reducers: {
@@ -83,16 +78,20 @@ const filterSlice = createSlice({
     },
 
     resetFilters:(state,{payload})=>{
+      state.items= resturants;
       state.sortBy= SORT_OPTIONS.LOW_TO_HIGH,
       state.costFilter= null,
       state.ratingFilter= ' ',
-      state.cuisineFilters= [],
+      // state.cuisineFilters= [],
       state.deliveryFilter= null,
       state.sortSubcategorySelected= false,
       state.costSubcategorySelected= false,
       state.ratingSubcategorySelected= false,
       state.cusineSubcategorySelected= false,
       state.deliverySubcategorySelected= false,
+      
+
+     
       state.filterCount=0
     },
     setCostFilter: (state, action) => {
@@ -117,24 +116,24 @@ const filterSlice = createSlice({
         state.filterCount += 1;
       }
     },
-    toggleCuisineFilter: (state, action) => {
-      const cuisine = action.payload;
-      const index = state.cuisineFilters.indexOf(cuisine);
+    // toggleCuisineFilter: (state, action) => {
+    //   const cuisine = action.payload;
+    //   const index = state.cuisineFilters.indexOf(cuisine);
       
-      if (index === -1) {
-        state.cuisineFilters.push(cuisine);
-      } else {
-        state.cuisineFilters.splice(index, 1);
-      }
+    //   if (index === -1) {
+    //     state.cuisineFilters.push(cuisine);
+    //   } else {
+    //     state.cuisineFilters.splice(index, 1);
+    //   }
 
-      const selectedSortSubcategory = action.payload;
+    //   const selectedSortSubcategory = action.payload;
 
-      if (!state.cusineSubcategorySelected) {
-        state.selectedSortSubcategory = selectedSortSubcategory;
-        state.cusineSubcategorySelected = true;
-        state.filterCount += 1;
-      }
-    },
+    //   if (!state.cusineSubcategorySelected) {
+    //     state.selectedSortSubcategory = selectedSortSubcategory;
+    //     state.cusineSubcategorySelected = true;
+    //     state.filterCount += 1;
+    //   }
+    // },
     setDeliveryFilter: (state, action) => {
       
       state.deliveryFilter = action.payload;

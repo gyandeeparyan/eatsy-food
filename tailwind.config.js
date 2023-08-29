@@ -24,6 +24,10 @@ export default {
         'brand-white': '#fff',
         
       },
+      fontFamily: {
+       
+        
+      }
       
     },
   },

@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import { CardSkeleton } from "./CardSkeleton";
 import { resturantList } from "../constants/constants";
 import SearchInput from "./Search";
-import { setSearchedItem ,setCusineFiltered } from "../utils/filterSlice";
+import { setSearchedItem ,setCusineFiltered, sortAndFilterItems } from "../utils/filterSlice";
 import { filtertext } from "./../constants/constants";
 import FilterLabels from "./FilterLabels";
 import FilterModal from "./FilterModal";
@@ -93,7 +93,9 @@ const handleLocation= async()=>{
 
 useEffect(()=>{
 setLoading(true)
+dispatch(sortAndFilterItems())
 handleLocation()
+
 
 },[])
 

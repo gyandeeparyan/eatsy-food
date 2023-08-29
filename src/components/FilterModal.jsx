@@ -106,7 +106,7 @@ const FilterModal = ({ isOpen, onClose }) => {
               </h2>
               <button
                 onClick={handleClear}
-                className='mt-4 bg-red-500 hover:bg-red-400 text-white text-s font-semibold m-3 p-2 rounded-xl'
+                className='mt-4 bg-red-500 hover:bg-red-400 text-white text-s font-semibold m-3 p-2 rounded-3xl'
               >
                 CLEAR
               </button>
