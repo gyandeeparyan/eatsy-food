@@ -163,7 +163,7 @@ handleLocation()
   </div> */}
       </div>
       <FilterModal isOpen={isModalOpen} onClose={closeModal} />
-      <div className='container mx-auto m-10 grid grid-cols-1 dark:bg-brand-coal dark:text-brand-beige md:grid-cols-4'>
+      <div className='container  mx-[60px] my-6 md:mx-[42px] grid grid-cols-1  dark:bg-brand-coal dark:text-brand-beige md:grid-cols-4'>
         {resturant.map((resturant) => {
           return (
             <Link
