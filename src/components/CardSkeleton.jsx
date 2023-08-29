@@ -3,7 +3,7 @@ import { Star } from 'lucide-react'
 
 export function CardSkeleton() {
   return (
-    <div className='container m-10 grid grid-cols-1 md:grid-cols-4'>
+    <div className='container mx-[60px] my-6 md:mx-[42px] grid grid-cols-1 md:grid-cols-4'>
       {
 Array(10)
 .fill("")
