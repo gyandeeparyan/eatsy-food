@@ -9,8 +9,11 @@ const OrderSuccess = () => {
         src='https://i.ibb.co/bQfCRqq/output-onlinegiftools-2-2.gif'
         alt=''
       />
-      <p className='dark:text-brand-beige text-3xl text-center'>order placed </p>  
-      <CheckCircle2 className="mx-auto mt-2 " size={50} fill="green"/>
+      <div className="flex justify-center">
+      <p className='dark:text-brand-beige mt-1 text-3xl text-center'>order placed </p>  
+      <CheckCircle2 className='mx-2 ' size={50} stroke="white" fill="green"/>
+      </div>
+      
       <p className='dark:text-brand-red text-3xl text-center mt-2'>tell me what you eat, and i will tell you who you are.</p> 
     </div>
   );
