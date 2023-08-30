@@ -33,7 +33,7 @@ const cartItems =useSelector(store=>store.cart.items);
     <div className=' w-full sticky top-0 bg-white  dark:bg-brand-coal dark:text-brand-beige z-40 mb-6'>
       <div className='mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8'>
         <div className='inline-flex items-center space-x-2'>
-          <Link to={"/"}><span className='font-extrabold text-5xl text-red-500 '>eatsy</span></Link>
+          <Link to={"/"}><span className='font-extrabold text-5xl text-brand-red '>eatsy</span></Link>
           <Link to={"/cart"}>
           <div className="flex mt-3 lg:hidden">
                 <ShoppingBag />
@@ -93,7 +93,7 @@ const cartItems =useSelector(store=>store.cart.items);
               <div className='px-5 pb-6 pt-5'>
                 <div className='flex items-center justify-between'>
                   <div className='inline-flex items-center space-x-2'>
-                  <Link to={"/"}><span className='font-extrabold text-5xl text-red-500 '>eatsy</span></Link>
+                  <Link to={"/"}><span className='font-extrabold text-5xl text-brand-red  '>eatsy</span></Link>
                   </div>
                   <div className='-mr-2'>
                     <button
