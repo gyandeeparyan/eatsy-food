@@ -44,6 +44,7 @@ const filterSlice = createSlice({
     cuisineFilters: [],
     deliveryFilter: null,
     filterCount:0,
+    resultCount:0,
     sortSubcategorySelected: false,
     costSubcategorySelected: false,
     ratingSubcategorySelected: false,
@@ -164,12 +165,14 @@ const filterSlice = createSlice({
     setSelectedDeliverySubcategory: (state, action) => {
       state.selectedDeliverySubcategory = action.payload;
     },
+
+
     sortAndFilterItems: (state,action) => {
       if ("vibrate" in navigator) {
         // vibration API supported
         navigator.vibrate(50);
       }
-
+      
       const { sortBy, costFilter, ratingFilter, cuisineFilters, deliveryFilter,items } = state;
       console.log(items);
       let filteredAndSortedItems = [...items];
@@ -259,6 +262,7 @@ if (deliveryFilter === DELIVERY_OPTIONS.FASTEST_DELIVERY) {
       state.items=filteredAndSortedItems
       console.log(typeof(filteredAndSortedItems))
       console.log(state.items);
+      state.resultCount=state.items.length
     },
 
     

@@ -39,7 +39,7 @@ const filterSubcategories = {
 
 const FilterModal = ({ isOpen, onClose }) => {
   const filterCount = useSelector((store) => store.filter.filterCount);
-
+  const resultCount = useSelector((store) => store.filter.resultCount);
   const [currentCategory, setCurrentCategory] = useState(null);
   const initialSubcategory = Object.keys(filterSubcategories)[0];
   const [currentSubcategory, setCurrentSubcategory] =
@@ -106,7 +106,7 @@ const FilterModal = ({ isOpen, onClose }) => {
               </h2>
               <button
                 onClick={handleClear}
-                className='mt-4 bg-red-500 hover:bg-red-400 text-white text-s font-semibold m-3 p-2 rounded-3xl'
+                className='mt-4 bg-red-500 hover:bg-red-400 text-white text-s font-semibold m-3 px-2 text-s rounded-full'
               >
                 CLEAR
               </button>
@@ -179,6 +179,16 @@ const FilterModal = ({ isOpen, onClose }) => {
                       {subcategory}
                     </label>
                   ))}
+
+<p className='mt-4 m-3 dark:text-brand-beige  py-2  rounded-full text-s text-slate-700'>
+                {" "}
+                <span className='  bg-brand-green   px-2 text-s ml-1 rounded-full  text-white'>
+                  {" "}
+                  {resultCount} 
+                </span>{" "}
+                Resturants
+               
+              </p>
               </div>
             </div>
           </div>
