@@ -20,7 +20,7 @@ import { useSelector } from "react-redux/es/hooks/useSelector";
 const filterLabels = {
   sortBy: { id: "sort", label: "Sort By" },
   ratings: { id: "ratings", label: "Ratings" },
- 
+
   costForTwo: { id: "cost", label: "Cost for Two" },
   delivery: { id: "delivery", label: "Delivery" },
 };
@@ -44,7 +44,7 @@ const FilterModal = ({ isOpen, onClose }) => {
   const initialSubcategory = Object.keys(filterSubcategories)[0];
   const [currentSubcategory, setCurrentSubcategory] =
     useState(initialSubcategory);
-    const [activeLabel, setActiveLabel] = useState(null);
+  const [activeLabel, setActiveLabel] = useState(null);
   const dispatch = useDispatch();
 
   const handleSubcategoryClick = (subcategory) => {
@@ -120,30 +120,41 @@ const FilterModal = ({ isOpen, onClose }) => {
 
             <div className='flex'>
               <div className='w-1/2 flex flex-col '>
-                {Object.keys(filterLabels).map((category) => (
-                  console.log("currentCategory:", currentCategory, "category:", category),
-                  <label
-                    key={category}
-                    className={`p-1 m-1 rounded-lg cursor-pointer active:bg-red-500 ${
-                      currentCategory == category
-                        ? "bg-red-500 text-white font-semibold"
-                        : "bg-white  dark:bg-brand-coal dark:text-brand-beige text-black"
-                    }`}
-                  >
-                    <input
-                      type='radio'
-                      name='category'
-                      value={category}
-                      checked={currentCategory === category}
-                      onChange={() => {
-                        setCurrentCategory(category);
-                        setCurrentSubcategory(null); // Reset subcategory on category change
-                      }}
-                      className='hidden'
-                    />
-                   <p className=" active:bg-red-500 active:text-white font-semibold">{filterLabels[category].label} </p> 
-                  </label>
-                ))}
+                {Object.keys(filterLabels).map(
+                  (category) => (
+                    console.log(
+                      "currentCategory:",
+                      currentCategory,
+                      "category:",
+                      category
+                    ),
+                    (
+                      <label
+                        key={category}
+                        className={`p-1 m-1 rounded-lg cursor-pointer active:bg-red-500 ${
+                          currentCategory == category
+                            ? "bg-red-500 text-white font-semibold"
+                            : "bg-white  dark:bg-brand-coal dark:text-brand-beige text-black"
+                        }`}
+                      >
+                        <input
+                          type='radio'
+                          name='category'
+                          value={category}
+                          checked={currentCategory === category}
+                          onChange={() => {
+                            setCurrentCategory(category);
+                            setCurrentSubcategory(null); // Reset subcategory on category change
+                          }}
+                          className='hidden'
+                        />
+                        <p className=' active:bg-red-500 active:text-white font-semibold'>
+                          {filterLabels[category].label}{" "}
+                        </p>
+                      </label>
+                    )
+                  )
+                )}
               </div>
 
               <div className='w-1/2 flex flex-col'>
@@ -167,10 +178,7 @@ const FilterModal = ({ isOpen, onClose }) => {
                       />
                       {subcategory}
                     </label>
-
-                  )
-                 
-                  )}
+                  ))}
               </div>
             </div>
           </div>
