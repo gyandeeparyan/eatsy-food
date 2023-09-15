@@ -14,7 +14,7 @@ const OrderSuccess = () => {
       <CheckCircle2 className='mx-2 ' size={50} stroke="white" fill="green"/>
       </div>
       
-      <p className='dark:text-brand-red text-3xl text-center mt-2'>tell me what you eat, and i will tell you who you are.</p> 
+      <p className='dark:text-brand-red text-3xl  text-center mt-2'>tell me what you eat, and i will tell you who you are.</p> 
     </div>
   );
 };
