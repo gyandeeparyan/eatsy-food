@@ -1,10 +1,14 @@
+import { useDispatch } from 'react-redux';
 "use client";
 
 import React from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { ShoppingBag } from 'lucide-react';
+import { ShoppingBag ,Sun,Moon} from 'lucide-react';
+import { toggleTheme } from '../utils/appSlice';
+
+
 
 const menuItems = [
   {
@@ -24,12 +28,27 @@ const menuItems = [
 
 function Navbar() {
 const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
 const cartItems =useSelector(store=>store.cart.items);
+const dark=useSelector(store=>store.app.isDark);
+const dispatch = useDispatch();
+//function to toggle dark mode
+
+const toggleDarkMode = () => {
+  dispatch(toggleTheme())
+  
+  {dark ? document.querySelector('html').classList.remove("dark") : document.querySelector('html').classList.add("dark")}
+}
+
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
+
+   
+
     <div className=' w-full sticky top-0 bg-white  dark:bg-brand-coal dark:text-brand-beige z-40 mb-6'>
       <div className='mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8'>
         <div className='inline-flex items-center space-x-2'>
@@ -38,8 +57,12 @@ const cartItems =useSelector(store=>store.cart.items);
           <div className="flex mt-3 lg:hidden">
                 <ShoppingBag />
                 <span className="bg-red-500 px-2 ml-1  rounded-full  text-white"> {cartItems.length} </span>
+                
           </div>
           </Link>
+          
+          
+        
           
         </div>
        
@@ -68,6 +91,9 @@ const cartItems =useSelector(store=>store.cart.items);
                   
               </Link>
             </li>
+            <li>
+{dark?<Sun onClick={toggleDarkMode} className='h-6 w-6cursor-pointer text-brand-yellow' />:<Moon onClick={toggleDarkMode} className='h-6 w-6  text-gray-800  cursor-pointer' />}
+            </li>
           </ul>
         </div>
         <div className='hidden lg:block'>
@@ -81,9 +107,10 @@ const cartItems =useSelector(store=>store.cart.items);
           </a>
           
         </div>
-        <div className='lg:hidden'>
-           
-          <Menu onClick={toggleMenu} className='h-6 w-6 cursor-pointer' />
+        <div className='lg:hidden flex '>
+        <div className='mt-3 '>{dark?<Sun onClick={toggleDarkMode} className='h-6 w-6cursor-pointer text-brand-yellow' />:<Moon onClick={toggleDarkMode} className='h-6 w-6  text-gray-800  cursor-pointer' />}</div>
+          
+          <Menu onClick={toggleMenu} className='h-6 w-6 mt-3 ml-2 cursor-pointer' />
         </div>
        
         {isMenuOpen && (
@@ -125,6 +152,7 @@ const cartItems =useSelector(store=>store.cart.items);
                 <span className="bg-red-500 px-2 ml-1  rounded-full  text-white"> {cartItems.length} </span>
           </div>
           </Link>
+         
                   </nav>
                 </div>
          
@@ -134,6 +162,7 @@ const cartItems =useSelector(store=>store.cart.items);
         )}
       </div>
     </div>
+    
   );
 }
 
