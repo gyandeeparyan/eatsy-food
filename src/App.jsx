@@ -12,13 +12,13 @@ function App() {
   return (
     <>
       <div className={`${dark ? "dark" : ""}`}>
-        <div className='w-full h-full dark:bg-brand-coal '>
+    
           <Navbar />
 
           <Outlet />
 
           <Footer />
-        </div>
+      
       </div>
     </>
   );
