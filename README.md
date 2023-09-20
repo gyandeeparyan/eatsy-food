@@ -34,11 +34,12 @@
 
 ### :dart: Features
 
-- GPT-Search
-- Authentication
-- Internationalisation
-- TMDB API
-- Memoisation
+-Search
+-Sort
+-Filter
+-Shimmer UI
+-Lazy Loading
+
 
 ### :art: Color Reference
 
