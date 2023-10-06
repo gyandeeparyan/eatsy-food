@@ -16,9 +16,10 @@ const SingleResturantCard = ({
       <img
         fetchpriority='high'
         loading='eager'
-        decoding='sync'
+        
         src={IMG_CDN_URL_SM + cloudinaryImageId}
-        srcSet={IMG_CDN_URL + cloudinaryImageId}
+        srcSet={`${IMG_CDN_URL_SM + cloudinaryImageId} 480w, ${IMG_CDN_URL + cloudinaryImageId} 1024w`}
+  sizes="(max-width: 600px) 480px, 1024px"
         alt='resturant image'
         className='h-[200px] w-full rounded-2xl object-cover'
       />
