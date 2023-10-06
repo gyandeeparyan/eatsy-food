@@ -17,7 +17,7 @@ const cartSlice = createSlice({
     removeItem: (state, action) => {
       if(state.items.length === 1){
         state.items= [];
-        
+        state.total=0
         
       }
       else{
@@ -26,6 +26,7 @@ const cartSlice = createSlice({
     },
     clearCart: (state) => {
       state.items = [];
+      state.total = 0;
     },
     increase:(state,{payload})=>{
       const cartItem= state.items.find((item)=>item.id=== payload.id)

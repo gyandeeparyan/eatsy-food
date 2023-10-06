@@ -5,7 +5,11 @@
 <h1>EATSY</h1>
 <p>"Welcome to eatsy Indulge your cravings with our cutting-edge food ordering app, crafted as an academic endeavor to mirror the best features of your favorite platforms. Discover delectable delights from local restaurants, just like Zomato and Swiggy. While we're not for real-world use, we're your one-stop destination to explore the digital flavors of food tech innovation!"</p>
 
+<<<<<<< HEAD
 <h4> <a href="https://eatsy-food.netlify.app/">View Demo</a> <span> · </span> <a href="https://github.com/gyandeeparyan/eatsy-food/blob/master/README.md"> Documentation </a> <span></span> <a href=" https://docs.google.com/document/d/1jHl52PsnCd7CSHJa8vCX-Ic3s7igFwqV7g1Rj_5Hcm4/edit?usp=sharing"> High Level Design </a> <span><span> · </span> <a href="https://docs.google.com/document/d/1WxVo67HfncnYxO2THD_bPTGskZpQ5VxNtns1FiJ362I/edit?usp=sharing"> Low Level Design </a> <span> · </span> <a href="https://github.com/gyandeeparyan/eatsy-food/issues"> Report Bug </a> <span> · </span> <a href="https://github.com/gyandeeparyan/eatsy-food/issues"> Request Feature </a> </h4>
+=======
+<h4> <a href="https://eatsy-food.netlify.app/">View Demo</a> <span> · </span> <a href="https://github.com/gyandeeparyan/eatsy-food/blob/master/README.md"> Documentation </a> <span> · </span> <a href="https://docs.google.com/document/d/1WxVo67HfncnYxO2THD_bPTGskZpQ5VxNtns1FiJ362I/edit?usp=sharing"> High Level Design </a> <span> · </span> <a href="https://docs.google.com/document/d/1jHl52PsnCd7CSHJa8vCX-Ic3s7igFwqV7g1Rj_5Hcm4/edit?usp=sharing"> Low Level Design </a> <span>  · </span> <a href="https://github.com/gyandeeparyan/eatsy-food/issues"> Report Bug </a> <span> · </span> <a href="https://github.com/gyandeeparyan/eatsy-food/issues"> Request Feature </a> </h4>
+>>>>>>> b4012fbe07b5e53df2317235bff6ee527e930763
 
 </div>
 
@@ -31,11 +35,12 @@
 
 ### :dart: Features
 
-- GPT-Search
-- Authentication
-- Internationalisation
-- TMDB API
-- Memoisation
+-Search
+-Sort
+-Filter
+-Shimmer UI
+-Lazy Loading
+
 
 ### :art: Color Reference
 

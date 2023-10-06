@@ -9,7 +9,7 @@ const SignIn = () => {
     <div>
      
       <div className='absolute top- border-[2px] bg-brand-beige border-black h-[396px] w-[1584px]'>
-        <p className="font-semibold text-xl absolute top-[180px] left-[600px]">
+        <p className="font-semibold text-3xl absolute top-[180px] left-[600px]">
        " संकल्प से सृष्टि 
         " 
         </p>

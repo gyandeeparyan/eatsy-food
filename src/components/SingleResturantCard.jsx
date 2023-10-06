@@ -14,6 +14,7 @@ const SingleResturantCard = ({
   return (
     <div key={id} className='w-[300px] rounded-2xl mb-8 '>
       <img
+      fetchpriority="high"
         src={IMG_CDN_URL + cloudinaryImageId}
         alt='resturant image'
         className='h-[200px] w-full rounded-2xl object-cover'

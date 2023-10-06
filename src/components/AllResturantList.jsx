@@ -6,7 +6,12 @@ import { useState, useEffect } from "react";
 import { CardSkeleton } from "./CardSkeleton";
 import { resturantList } from "../constants/constants";
 import SearchInput from "./Search";
-import { setSearchedItem ,setCusineFiltered, sortAndFilterItems } from "../utils/filterSlice";
+import {
+  setSearchedItem,
+  setCusineFiltered,
+  sortAndFilterItems,
+  setResturants,
+} from "../utils/filterSlice";
 import { filtertext } from "./../constants/constants";
 import FilterLabels from "./FilterLabels";
 import FilterModal from "./FilterModal";
@@ -14,7 +19,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 const AllResturantList = () => {
   const resturant = useSelector((store) => store.filter.items);
-  const dispatch =useDispatch()
+  const dispatch = useDispatch();
   const allUniqueCusineList = [
     "all",
     ...new Set(
@@ -35,7 +40,7 @@ const AllResturantList = () => {
 
   const filterLabels = filtertext;
 
-  const url = `https://www.swiggy.com/mapi/restaurants/list/v5?offset=0&is-seo-homepage-enabled=true&lat=22.572646&lng=88.36389500000001&carousel=true&third_party_vendor=1`;
+  // const url = `https://www.swiggy.com/mapi/restaurants/list/v5?offset=0&is-seo-homepage-enabled=true&lat=22.572646&lng=88.36389500000001&carousel=true&third_party_vendor=1`;
   // useEffect(() => {
   //   getResturants();
   // }, []);
@@ -45,14 +50,13 @@ const AllResturantList = () => {
   //     setLoading(true);
   //     const data = await fetch(url);
   //     const json = await data.json();
-  //     setAllResturants(
-  //       json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
-  //         ?.restaurants
+  //     dispatch(
+  //       setResturants(
+  //         json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+  //           ?.restaurants
+  //       )
   //     );
-  //     setFilteredResturants(
-  //       json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
-  //         ?.restaurants
-  //     );
+
   //     setLoading(false);
   //     console.log(
   //       json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
@@ -60,51 +64,24 @@ const AllResturantList = () => {
   //     );
   //   } catch (error) {
   //     console.log(error);
-  //     setLoading(false)
+  //     setLoading(false);
   //     setAllResturants(resturantList);
   //     setFilteredResturants(resturantList);
   //   }
   // };
   const [isModalOpen, setIsModalOpen] = useState(false);
-  
-//   const locationUrl = 'https://wft-geo-db.p.rapidapi.com/v1/geo/places/%7BplaceId%7D';
-// const options = {
-// 	method: 'GET',
-// 	headers: {
-// 		'X-RapidAPI-Key': 'a722c260famshd1e0217900ba4b5p10d517jsn42b3438f1549',
-// 		'X-RapidAPI-Host': 'wft-geo-db.p.rapidapi.com'
-// 	}
-// };
 
+  const handleShimmer = () => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1200);
+  };
 
-// const handleLocation= async()=>{
-//   try {
-    
-//     const response = await fetch(locationUrl, options);
-//     const result = await response.text();
-//     console.log(result);
-//    setLoading(false)
-//     setLoading(false)
-//   } catch (error) {
-//     setLoading(false)
-//     console.error(error);
-//   }
-// }
-
-const handleShimmer =()=>{
-  setTimeout(()=>{setLoading(false)},1200)
-}
-
-useEffect(()=>{
-setLoading(true)
-dispatch(sortAndFilterItems())
-handleShimmer()
-
-
-},[])
-
-
-
+  useEffect(() => {
+    setLoading(true);
+    dispatch(sortAndFilterItems());
+    handleShimmer();
+  }, []);
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -118,13 +95,12 @@ handleShimmer()
 
   const handleSearch = () => {
     const data = filterData(searchText, allResturants);
-   dispatch(setSearchedItem(data))
+    dispatch(setSearchedItem(data));
   };
 
   const handleFilter = (item) => {
-   
     const data = filterCusine(item, allResturants);
-    dispatch(setCusineFiltered(data))
+    dispatch(setCusineFiltered(data));
   };
 
   return loading ? (
@@ -142,9 +118,8 @@ handleShimmer()
         {filteredCusine.map((item) => {
           return (
             <button
-              className='bg-white text-gray-900  rounded-3xl border-2 border-slate-200 px-4 py-2  m-2 active:border-none focus:bg-red-500 focus:border-red-500 focus:text-white focus:font-bold'
-              onClick={() => handleFilter(item)}
-            >
+              className='bg-white dark:bg-brand-charcoal-muted dark:text-zinc-400 text-gray-900  rounded-3xl border-1 border-slate-200 px-4 py-2  m-2 active:border-none dark:focus:bg-red-500 focus:bg-red-500 dark:focus:border-red-500 focus:border-red-500 dark:focus:text-white focus:text-white focus:font-bold'
+              onClick={() => handleFilter(item)}>
               {item}
             </button>
           );
@@ -172,8 +147,7 @@ handleShimmer()
           return (
             <Link
               to={"/resturant/" + resturant.info.id}
-              key={resturant.info.id}
-            >
+              key={resturant.info.id}>
               <SingleResturantCard {...resturant.info} />
             </Link>
           );

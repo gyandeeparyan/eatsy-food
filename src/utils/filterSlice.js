@@ -1,17 +1,16 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { resturantList } from '../constants/constants';
-
+import { createSlice } from "@reduxjs/toolkit";
+import { resturantList } from "../constants/constants";
 
 const SORT_OPTIONS = {
-  LOW_TO_HIGH: 'Low to High',
-  HIGH_TO_LOW: 'High to Low',
-  FASTEST_DELIVERY: 'Fastest Delivery',
+  LOW_TO_HIGH: "Low to High",
+  HIGH_TO_LOW: "High to Low",
+  FASTEST_DELIVERY: "Fastest Delivery",
 };
 
 const COST_OPTIONS = {
-  RS_300_TO_RS_600: 'Rs. 300 - Rs. 600',
-  GREATER_THAN_RS_600: 'Greater than Rs. 600',
-  LESS_THAN_RS_300: 'Less than Rs. 300',
+  RS_300_TO_RS_600: "Rs. 300 - Rs. 600",
+  GREATER_THAN_RS_600: "Greater than Rs. 600",
+  LESS_THAN_RS_300: "Less than Rs. 300",
 };
 
 const RATING_OPTIONS = {
@@ -28,39 +27,40 @@ const RATING_OPTIONS = {
 // };
 
 const DELIVERY_OPTIONS = {
-  FASTEST_DELIVERY: 'Fastest Delivery',
+  FASTEST_DELIVERY: "Fastest Delivery",
 };
 
-const resturants =resturantList
-
+const resturants = resturantList;
 
 const filterSlice = createSlice({
-  name: 'filter',
+  name: "filter",
   initialState: {
     items: resturants,
     sortBy: SORT_OPTIONS.LOW_TO_HIGH,
     costFilter: null,
-    ratingFilter: ' ',
+    ratingFilter: " ",
     cuisineFilters: [],
     deliveryFilter: null,
-    filterCount:0,
-    resultCount:0,
+    filterCount: 0,
+    resultCount: 0,
     sortSubcategorySelected: false,
     costSubcategorySelected: false,
     ratingSubcategorySelected: false,
     cusineSubcategorySelected: false,
     deliverySubcategorySelected: false,
- // New state variables to track selected subcategories for each filter
-
+    // New state variables to track selected subcategories for each filter
   },
   reducers: {
-    
-    setSearchedItem: (state,{payload})=>{
-      state.items= payload
+    setResturants: (state, { payload }) => {
+      state.items = payload;
     },
-    
-    setCusineFiltered:(state,{payload})=>{
-     state.items= payload
+
+    setSearchedItem: (state, { payload }) => {
+      state.items = payload;
+    },
+
+    setCusineFiltered: (state, { payload }) => {
+      state.items = payload;
     },
     setSortBy: (state, action) => {
       state.sortBy = action.payload;
@@ -70,30 +70,26 @@ const filterSlice = createSlice({
       console.log(typeof resturants);
       const selectedSortSubcategory = action.payload;
 
-     if (!state.sortSubcategorySelected) {
-     state.selectedSortSubcategory = selectedSortSubcategory;
-     state.sortSubcategorySelected = true;
-     state.filterCount += 1;
-}
-
+      if (!state.sortSubcategorySelected) {
+        state.selectedSortSubcategory = selectedSortSubcategory;
+        state.sortSubcategorySelected = true;
+        state.filterCount += 1;
+      }
     },
 
-    resetFilters:(state,{payload})=>{
-      state.items= resturants;
-      state.sortBy= SORT_OPTIONS.LOW_TO_HIGH,
-      state.costFilter= null,
-      state.ratingFilter= ' ',
-      // state.cuisineFilters= [],
-      state.deliveryFilter= null,
-      state.sortSubcategorySelected= false,
-      state.costSubcategorySelected= false,
-      state.ratingSubcategorySelected= false,
-      state.cusineSubcategorySelected= false,
-      state.deliverySubcategorySelected= false,
-      
-
-     
-      state.filterCount=0
+    resetFilters: (state, { payload }) => {
+      state.items = resturants;
+      (state.sortBy = SORT_OPTIONS.LOW_TO_HIGH),
+        (state.costFilter = null),
+        (state.ratingFilter = " "),
+        // state.cuisineFilters= [],
+        (state.deliveryFilter = null),
+        (state.sortSubcategorySelected = false),
+        (state.costSubcategorySelected = false),
+        (state.ratingSubcategorySelected = false),
+        (state.cusineSubcategorySelected = false),
+        (state.deliverySubcategorySelected = false),
+        (state.filterCount = 0);
     },
     setCostFilter: (state, action) => {
       state.costFilter = action.payload;
@@ -120,7 +116,7 @@ const filterSlice = createSlice({
     // toggleCuisineFilter: (state, action) => {
     //   const cuisine = action.payload;
     //   const index = state.cuisineFilters.indexOf(cuisine);
-      
+
     //   if (index === -1) {
     //     state.cuisineFilters.push(cuisine);
     //   } else {
@@ -136,7 +132,6 @@ const filterSlice = createSlice({
     //   }
     // },
     setDeliveryFilter: (state, action) => {
-      
       state.deliveryFilter = action.payload;
       console.log(state.items);
 
@@ -149,8 +144,8 @@ const filterSlice = createSlice({
       }
     },
 
-     // New reducers to update the selected subcategories
-     setSelectedSortSubcategory: (state, action) => {
+    // New reducers to update the selected subcategories
+    setSelectedSortSubcategory: (state, action) => {
       state.selectedSortSubcategory = action.payload;
     },
     setSelectedCostSubcategory: (state, action) => {
@@ -166,14 +161,20 @@ const filterSlice = createSlice({
       state.selectedDeliverySubcategory = action.payload;
     },
 
-
-    sortAndFilterItems: (state,action) => {
+    sortAndFilterItems: (state, action) => {
       if ("vibrate" in navigator) {
         // vibration API supported
         navigator.vibrate(50);
       }
-      
-      const { sortBy, costFilter, ratingFilter, cuisineFilters, deliveryFilter,items } = state;
+
+      const {
+        sortBy,
+        costFilter,
+        ratingFilter,
+        cuisineFilters,
+        deliveryFilter,
+        items,
+      } = state;
       console.log(items);
       let filteredAndSortedItems = [...items];
       console.log(filteredAndSortedItems);
@@ -182,94 +183,121 @@ const filterSlice = createSlice({
 
       // Sorting logic
       // Sorting logic
-switch (sortBy) {
-  case SORT_OPTIONS.LOW_TO_HIGH:
-    filteredAndSortedItems.sort((a, b) => a.info.feeDetails.fees[0].fee - b.info.feeDetails.fees[0].fee);
-    console.log("L-H SORT CALLED");
-    
-    break;
+      switch (sortBy) {
+        case SORT_OPTIONS.LOW_TO_HIGH:
+          filteredAndSortedItems.sort(
+            (a, b) =>
+              a.info.feeDetails.fees[0].fee - b.info.feeDetails.fees[0].fee
+          );
+          console.log("L-H SORT CALLED");
 
-  case SORT_OPTIONS.HIGH_TO_LOW:
-    filteredAndSortedItems.sort((a, b) => b.info.feeDetails.fees[0].fee - a.info.feeDetails.fees[0].fee);
-    console.log("H-L SORT CALLED");
-    break;
+          break;
 
-  case SORT_OPTIONS.FASTEST_DELIVERY:
-    filteredAndSortedItems.sort((a, b) => a.info.sla.deliveryTime - b.info.sla.deliveryTime);
-    console.log("FST SORT CALLED");
-    break;
+        case SORT_OPTIONS.HIGH_TO_LOW:
+          filteredAndSortedItems.sort(
+            (a, b) =>
+              b.info.feeDetails.fees[0].fee - a.info.feeDetails.fees[0].fee
+          );
+          console.log("H-L SORT CALLED");
+          break;
 
-  default:
-    break;
-}
+        case SORT_OPTIONS.FASTEST_DELIVERY:
+          filteredAndSortedItems.sort(
+            (a, b) => a.info.sla.deliveryTime - b.info.sla.deliveryTime
+          );
+          console.log("FST SORT CALLED");
+          break;
 
-// Filtering logic for cost
-switch (costFilter) {
-  case COST_OPTIONS.RS_300_TO_RS_600:
-    filteredAndSortedItems = filteredAndSortedItems.filter(item => item.info.feeDetails.fees[0].fee >= 3000 && item.info.feeDetails.fees[0].fee <= 6000);
-    console.log("300-600 SORT CALLED");
-    break;
+        default:
+          break;
+      }
 
-  case COST_OPTIONS.GREATER_THAN_RS_600:
-    filteredAndSortedItems = filteredAndSortedItems.filter(item => item.info.feeDetails.fees[0].fee > 6000);
-    console.log(">600 SORT CALLED");
-    break;
+      // Filtering logic for cost
+      switch (costFilter) {
+        case COST_OPTIONS.RS_300_TO_RS_600:
+          filteredAndSortedItems = filteredAndSortedItems.filter(
+            (item) =>
+              item.info.feeDetails.fees[0].fee >= 3000 &&
+              item.info.feeDetails.fees[0].fee <= 6000
+          );
+          console.log("300-600 SORT CALLED");
+          break;
 
-  case COST_OPTIONS.LESS_THAN_RS_300:
-    filteredAndSortedItems = filteredAndSortedItems.filter(item => item.info.feeDetails.fees[0].fee < 3000);
-    console.log("<300 SORT CALLED");
-    break;
+        case COST_OPTIONS.GREATER_THAN_RS_600:
+          filteredAndSortedItems = filteredAndSortedItems.filter(
+            (item) => item.info.feeDetails.fees[0].fee > 6000
+          );
+          console.log(">600 SORT CALLED");
+          break;
 
-  default:
-    break;
-}
+        case COST_OPTIONS.LESS_THAN_RS_300:
+          filteredAndSortedItems = filteredAndSortedItems.filter(
+            (item) => item.info.feeDetails.fees[0].fee < 3000
+          );
+          console.log("<300 SORT CALLED");
+          break;
 
-// Filtering logic for rating
-const numericRatingFilter = parseFloat(ratingFilter.replace('+', ''));
-switch (numericRatingFilter) {
-  case RATING_OPTIONS.RATING_4_5_PLUS:
-    filteredAndSortedItems = filteredAndSortedItems.filter(item => parseFloat(item.info.avgRatingString.replace('+', '')) >= 4.5);
-    console.log("4.5+ SORT CALLED");
-    break;
+        default:
+          break;
+      }
 
-  case RATING_OPTIONS.RATING_4_0_PLUS:
-    filteredAndSortedItems = filteredAndSortedItems.filter(item => parseFloat(item.info.avgRatingString.replace('+', '')) >= 4.0);
-    console.log("4.0+ SORT CALLED");
-    break;
+      // Filtering logic for rating
+      const numericRatingFilter = parseFloat(ratingFilter.replace("+", ""));
+      switch (numericRatingFilter) {
+        case RATING_OPTIONS.RATING_4_5_PLUS:
+          filteredAndSortedItems = filteredAndSortedItems.filter(
+            (item) =>
+              parseFloat(item.info.avgRatingString.replace("+", "")) >= 4.5
+          );
+          console.log("4.5+ SORT CALLED");
+          break;
 
-  case RATING_OPTIONS.RATING_3_5_PLUS:
-    filteredAndSortedItems = filteredAndSortedItems.filter(item => parseFloat(item.info.avgRatingString.replace('+', '')) >= 3.5);
-    console.log("3.5+ SORT CALLED");
-    break;
+        case RATING_OPTIONS.RATING_4_0_PLUS:
+          filteredAndSortedItems = filteredAndSortedItems.filter(
+            (item) =>
+              parseFloat(item.info.avgRatingString.replace("+", "")) >= 4.0
+          );
+          console.log("4.0+ SORT CALLED");
+          break;
 
-  default:
-    break;
-}
+        case RATING_OPTIONS.RATING_3_5_PLUS:
+          filteredAndSortedItems = filteredAndSortedItems.filter(
+            (item) =>
+              parseFloat(item.info.avgRatingString.replace("+", "")) >= 3.5
+          );
+          console.log("3.5+ SORT CALLED");
+          break;
 
-// Filtering logic for cuisine filters
-if (cuisineFilters.length > 0) {
-  filteredAndSortedItems = filteredAndSortedItems.filter(item => cuisineFilters.includes(item.cuisine));
-}
+        default:
+          break;
+      }
 
-// Sorting logic for delivery
-if (deliveryFilter === DELIVERY_OPTIONS.FASTEST_DELIVERY) {
-  filteredAndSortedItems.sort((a, b) => a.info.sla.deliveryTime - b.info.sla.deliveryTime);
-  console.log("FST SORT CALLED");
-}
+      // Filtering logic for cuisine filters
+      if (cuisineFilters.length > 0) {
+        filteredAndSortedItems = filteredAndSortedItems.filter((item) =>
+          cuisineFilters.includes(item.cuisine)
+        );
+      }
 
+      // Sorting logic for delivery
+      if (deliveryFilter === DELIVERY_OPTIONS.FASTEST_DELIVERY) {
+        filteredAndSortedItems.sort(
+          (a, b) => a.info.sla.deliveryTime - b.info.sla.deliveryTime
+        );
+        console.log("FST SORT CALLED");
+      }
 
       // Update the state with the filtered and sorted items
-      state.items=filteredAndSortedItems
-      console.log(typeof(filteredAndSortedItems))
+      state.items = filteredAndSortedItems;
+      console.log(typeof filteredAndSortedItems);
       console.log(state.items);
-      state.resultCount=state.items.length
+      state.resultCount = state.items.length;
     },
-
-    
   },
 });
 
 export const {
+  setResturants,
   setSortBy,
   setCostFilter,
   setRatingFilter,
@@ -283,7 +311,7 @@ export const {
   setSelectedRatingSubcategory,
   setSelectedCuisineSubcategory,
   setSelectedDeliverySubcategory,
-  sortAndFilterItems
+  sortAndFilterItems,
 } = filterSlice.actions;
 
 export default filterSlice.reducer;
