@@ -23,7 +23,7 @@ const handleOrderNow=()=>{
 
 const handleRemove=(item)=>{
 if(cartItems.items.length === 1){
-  dispatch(removeItem(item))
+  
   setEmpty(true)
 }  
 dispatch(removeItem(item))

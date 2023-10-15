@@ -12,15 +12,22 @@ const SingleResturantCard = ({
   sla,
 }) => {
   return (
-    <div key={id} className='w-[300px] rounded-2xl mb-8 '>
-      <picture    >
-        <source     className='h-[200px] w-full rounded-2xl object-cover' media="(max-width: 450px)" srcSet={IMG_CDN_URL_SM + cloudinaryImageId} />
-        <source     className='h-[200px] w-full rounded-2xl object-cover' media="(min-width: 900px)" srcSet={IMG_CDN_URL + cloudinaryImageId}  />
+    <div key={id} className='w-[300px] rounded-xl mb-8 '>
+      <picture>
+        <source
+          className='h-[200px] w-full rounded-lg object-cover'
+          media='(max-width: 450px)'
+          srcSet={IMG_CDN_URL_SM + cloudinaryImageId}
+        />
+        <source
+          className='h-[200px] w-full rounded-lg object-cover'
+          media='(min-width: 900px)'
+          srcSet={IMG_CDN_URL + cloudinaryImageId}
+        />
         <img
-         
           src={IMG_CDN_URL_SM + cloudinaryImageId}
           alt='resturant-image'
-          className='h-[200px] w-full rounded-2xl object-cover'
+          className='h-[200px] w-full rounded-lg object-cover'
         />
       </picture>
       <div className='p-4'>
